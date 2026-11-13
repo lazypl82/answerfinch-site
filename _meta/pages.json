@@ -1,0 +1,68 @@
+{
+  "site": "https://answerfinch.com",
+  "default_image": "/assets/marketplace/1-editor.png",
+  "marketplace": "https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339",
+  "pages": [
+    {
+      "file": "index.html",
+      "path": "/",
+      "type": "website",
+      "priority": "1.0",
+      "title": "Answerfinch: Conditional email notifications for Google Forms",
+      "description": "With Answerfinch, a Google Forms add-on by Lazy Labs, you can automatically email the right person when an answer matches your rule. On Free you run one rule at a time across your Google account. Pro is $4 a month or $29 a year.",
+      "jsonld": "software"
+    },
+    {
+      "file": "help/conditional-email-notifications.html",
+      "path": "/help/conditional-email-notifications.html",
+      "type": "article",
+      "priority": "0.8"
+    },
+    {
+      "file": "help/personalized-confirmation-email.html",
+      "path": "/help/personalized-confirmation-email.html",
+      "type": "article",
+      "priority": "0.8"
+    },
+    {
+      "file": "help/conditional-email-recipes.html",
+      "path": "/help/conditional-email-recipes.html",
+      "type": "article",
+      "priority": "0.8"
+    },
+    {
+      "file": "help/conference-signup-confirmation.html",
+      "path": "/help/conference-signup-confirmation.html",
+      "type": "article",
+      "priority": "0.8"
+    },
+    {
+      "file": "help/choose-google-forms-email-add-on.html",
+      "path": "/help/choose-google-forms-email-add-on.html",
+      "type": "article",
+      "priority": "0.8"
+    },
+    {
+      "file": "support.html",
+      "path": "/support.html",
+      "type": "website",
+      "priority": "0.4",
+      "description": "How to get help with Answerfinch, the Google Forms add-on by Lazy Labs. Support is by email."
+    },
+    {
+      "file": "privacy.html",
+      "path": "/privacy.html",
+      "type": "website",
+      "priority": "0.3",
+      "description": "How Answerfinch, the Google Forms add-on by Lazy Labs, handles form responses, license checks and payment information."
+    },
+    {
+      "file": "terms.html",
+      "path": "/terms.html",
+      "type": "website",
+      "priority": "0.3",
+      "description": "Terms of Service for Answerfinch, the Google Forms add-on by Lazy Labs, including Pro subscriptions, cancellation and refunds."
+    }
+  ],
+  "noindex": []
+}

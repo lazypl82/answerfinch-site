@@ -1,7 +1,7 @@
 {
   "site": "https://answerfinch.com",
   "default_image": "/assets/og-answerfinch-1200x630.png",
-  "marketplace": "https://workspace.google.com/marketplace/app/formbell_conditional_email_notifications/602427031339",
+  "marketplace": "https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notifications/602427031339",
   "pages": [
     {
       "file": "index.html",

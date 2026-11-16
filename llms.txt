@@ -12,6 +12,7 @@ Answerfinch is made by Lazy Labs. It is not related to other products named Finc
 ## Guides
 
 - [Set up answer-based notifications](https://answerfinch.com/help/conditional-email-notifications.html): install, first rule, preview and test
+- [Notifications not working](https://answerfinch.com/help/email-notifications-not-working.html): checks for Google Forms notifications and Answerfinch emails that don't arrive
 - [FAQ](https://answerfinch.com/help/faq.html): free plan, limits, privacy, why an email may not arrive
 - [Personalized confirmation emails](https://answerfinch.com/help/personalized-confirmation-email.html)
 - [Three answer-based recipes](https://answerfinch.com/help/conditional-email-recipes.html)

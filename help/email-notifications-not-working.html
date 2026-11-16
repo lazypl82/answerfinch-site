@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Forms email notifications not working? What to check | Answerfinch</title>
+<!-- meta:start -->
+<meta name="description" content="Google Forms email notifications not arriving? Check Google&#x27;s own notification settings first, then the Answerfinch send log, rules and daily sending limit.">
+<link rel="canonical" href="https://answerfinch.com/help/email-notifications-not-working.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Answerfinch by Lazy Labs">
+<meta property="og:title" content="Google Forms email notifications not working? What to check | Answerfinch">
+<meta property="og:description" content="Google Forms email notifications not arriving? Check Google&#x27;s own notification settings first, then the Answerfinch send log, rules and daily sending limit.">
+<meta property="og:url" content="https://answerfinch.com/help/email-notifications-not-working.html">
+<meta property="og:image" content="https://answerfinch.com/assets/og-answerfinch-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/svg+xml" href="/assets/answerfinch-mark.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C1C1E">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c19460813e6543029489f478b595bb10"}'></script>
+<!-- meta:end -->
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="../index.html"><img src="../assets/answerfinch-mark.svg" alt="">Answerfinch</a>
+  <nav><a href="index.html" aria-current="page">Guides</a><a href="../index.html#pricing">Pricing</a><a href="https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notificati/602427031339">Install</a></nav>
+</header>
+<main>
+<p class="kicker">Guide</p>
+<h1>Google Forms email notifications not working? What to check</h1>
+<p class="dek">Work through these checks in order. The first part covers the notifications built into Google Forms. The second part covers answer-based emails sent with Answerfinch.</p>
+<p class="soft">Last updated: November 16, 2026</p>
+
+<h2>Google Forms' own notifications</h2>
+<p>Google Forms can email you when a new response comes in. Check these first.</p>
+<ol>
+<li><strong>Is the setting on for your account?</strong> In the form, open Responses, then More (three dots), and check Get email notifications for new responses. It applies to the Google account that turned it on. If a teammate also wants the emails, they turn it on while signed in to their own account.</li>
+<li><strong>Are you looking in the right inbox?</strong> The email goes to the Google account that turned the setting on. If you use more than one Google account, check the other one.</li>
+<li><strong>Is it in spam or filtered?</strong> Search your mail for the form's name, including spam and any folders your filters move mail to.</li>
+<li><strong>Did the respondent expect a copy?</strong> A copy for the person who filled in the form is a different setting. Open Settings, then Responses, and look at Collect email addresses and Send responders a copy of their response. Google's <a href="https://support.google.com/docs/answer/139706?hl=en">help page</a> explains both.</li>
+</ol>
+<p>Google's notifications go to you, for every response. If you need an email only for certain answers, or sent to someone else, that's what an add-on like Answerfinch is for.</p>
+
+<h2>Answer-based emails with Answerfinch</h2>
+<p>Start with the send log. Open your form, open Answerfinch from the add-on menu (puzzle piece icon), and go to Send log. Choose Refresh.</p>
+
+<h3>If there is no entry for the response</h3>
+<ol>
+<li><strong>Right Google account.</strong> Rules belong to the Google account that made them. Open the form while signed in to that account.</li>
+<li><strong>Alerts are on.</strong> The switch at the top of the sidebar should say Alerts on for this form.</li>
+<li><strong>The rule is active.</strong> On Free, one rule runs at a time across your account, so check it's the rule you picked.</li>
+<li><strong>The answer really matches.</strong> For a text question, the value has to match exactly, including capital letters and spaces. A response that doesn't match sends nothing and may not add a log entry. That's expected.</li>
+<li><strong>Alerts need reconnecting.</strong> If the sidebar asks you to, choose Reconnect alerts. Reconnecting doesn't bring back earlier responses.</li>
+<li><strong>The response is old.</strong> Answerfinch doesn't send a response automatically if it sees it more than 48 hours after it was submitted.</li>
+</ol>
+
+<h3>If there is an entry</h3>
+<ul class="ruled">
+  <li><span class="k">Sent</span><span class="v">Google accepted the email for sending. It doesn't confirm it reached the inbox, so ask the recipient to check spam.</span></li>
+  <li><span class="k">Failed</span><span class="v">The log shows a reason when one is available, such as your Google account reaching its daily sending limit.</span></li>
+  <li><span class="k">Unknown</span><span class="v">Google didn't confirm whether it was sent. It may already have gone out.</span></li>
+  <li><span class="k">Processing</span><span class="v">The send is still in progress. Refresh again in a moment.</span></li>
+</ul>
+<p>For eligible Failed or Unknown entries, you can use Review and resend. Resending an Unknown entry may send a duplicate, and you see a warning first. A resend uses the current rule and response, not a saved copy of the original email.</p>
+
+<h3>Google's daily sending limit</h3>
+<p>Answerfinch sends from your own Google account, so Google's limits for your account apply. Google sets a daily recipient limit for email sent this way, and it is lower for personal Gmail accounts than for Google Workspace accounts. Google lists the current numbers on its <a href="https://developers.google.com/apps-script/guides/services/quotas">quotas page</a>. In Answerfinch, open Details to see how many recipients Google has left for today. Test emails count too.</p>
+
+<h3>Emails to the person who filled in the form</h3>
+<p>A confirmation rule needs an address. It uses the address Google Forms collects, or an email question you choose. If email collection is off, pick the question that holds their email in the rule.</p>
+
+<h2>Still stuck?</h2>
+<p>Email <a href="mailto:support@answerfinch.com">support@answerfinch.com</a> with the step, the app version, any error code and the time in UTC. Please don't send form responses, recipient addresses or license keys.</p>
+
+  <section class="section" id="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="conditional-email-notifications.html">Set up answer-based notifications</a></li>
+      <li><a href="personalized-confirmation-email.html">Personalized confirmation emails</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="index.html">All guides</a></li>
+    </ul>
+  </section>
+
+  </main>
+<footer>
+  Answerfinch is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:support@answerfinch.com">support@answerfinch.com</a> · <a href="../support.html">Support</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a><br>
+  Google Forms is a trademark of Google LLC.
+</footer>
+</body>
+</html>

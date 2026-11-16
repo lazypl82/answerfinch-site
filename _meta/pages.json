@@ -24,6 +24,13 @@
       "jsonld": "faq"
     },
     {
+      "file": "help/email-notifications-not-working.html",
+      "path": "/help/email-notifications-not-working.html",
+      "type": "article",
+      "priority": "0.8",
+      "description": "Google Forms email notifications not arriving? Check Google's own notification settings first, then the Answerfinch send log, rules and daily sending limit."
+    },
+    {
       "file": "help/conditional-email-notifications.html",
       "path": "/help/conditional-email-notifications.html",
       "type": "article",

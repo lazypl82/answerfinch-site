@@ -34,40 +34,40 @@
 <main>
 <p class="kicker">Guide</p>
 <h1>Google Forms email notifications not working? What to check</h1>
-<p class="dek">Work through these checks in order. The first part covers the notifications built into Google Forms. The second part covers answer-based emails sent with Answerfinch.</p>
+<p class="dek">Someone filled in your form, but no email arrived. Go through these checks in order. Start with the notifications built into Google Forms. If you use Answerfinch, continue with the second part.</p>
 <p class="soft">Last updated: November 16, 2026</p>
 
 <h2>Google Forms' own notifications</h2>
 <p>You can receive an email for each new Google Forms response. Check these first.</p>
 <ol>
-<li><strong>Is the setting on for your account?</strong> In the form, open Responses, then More (three dots), and check Get email notifications for new responses. It applies to the Google account that turned it on. If a teammate also wants the emails, they turn it on while signed in to their own account.</li>
-<li><strong>Are you looking in the right inbox?</strong> The email goes to the Google account that turned the setting on. If you use more than one Google account, check the other one.</li>
-<li><strong>Is it in spam or filtered?</strong> Search your mail for the form's name, including spam and any folders your filters move mail to.</li>
-<li><strong>Did the respondent expect a copy?</strong> A copy for the person who filled in the form is a different setting. Open Settings, then Responses, and look at Collect email addresses and Send responders a copy of their response. Google's <a href="https://support.google.com/docs/answer/139706?hl=en">help page</a> explains both.</li>
+<li>Is the setting on for your account? In the form, open Responses, then More (three dots), and check Get email notifications for new responses. Only the person who turns it on gets these emails. If a teammate also wants them, they need to turn it on in their own Google account.</li>
+<li>Are you looking in the right inbox? You get the email in the Google account you used to turn on the setting. If you use more than one Google account, check the other one.</li>
+<li>Is it in spam or filtered? Search your mail for the form's name, including spam and any folders your filters move mail to.</li>
+<li>Did the respondent expect a copy? A copy for the person who filled in the form is a different setting. Open Settings, then Responses, and look at Collect email addresses and Send responders a copy of their response. See Google's <a href="https://support.google.com/docs/answer/139706?hl=en">help page</a> for both.</li>
 </ol>
-<p>Google's notifications go to you, for every response. If you need an email only for certain answers, or sent to someone else, that's what an add-on like Answerfinch is for.</p>
+<p>With Google's setting, you get an email for every response. If you want an email only for certain answers, or want it to go to someone else, you need an add-on such as Answerfinch.</p>
 
 <h2>Answer-based emails with Answerfinch</h2>
 <p>Start with the send log. Open your form, open Answerfinch from the add-on menu (puzzle piece icon), and go to Send log. Choose Refresh.</p>
 
 <h3>If there is no entry for the response</h3>
 <ol>
-<li><strong>Right Google account.</strong> Rules belong to the Google account that made them. Open the form while signed in to that account.</li>
-<li><strong>Alerts are on.</strong> The switch at the top of the sidebar should say Alerts on for this form.</li>
-<li><strong>The rule is active.</strong> On Free, one rule runs at a time across your account, so check it's the rule you picked.</li>
-<li><strong>The answer really matches.</strong> For a text question with the is condition, check capital letters and spaces: the whole answer must match. For contains, check that the answer includes the text you entered. If an answer doesn't match the rule, you won't send an email for it. You might see no log entry for that response.</li>
-<li><strong>Alerts need reconnecting.</strong> If prompted, choose Reconnect alerts. You won't automatically send emails for earlier responses after reconnecting.</li>
-<li><strong>The response is old.</strong> You won't send an email automatically for a response processed 48 hours or more after submission.</li>
+<li>Right Google account. You see your rules only in the Google account you used to create them. Open the form while signed in to that account.</li>
+<li>Alerts are on. At the top of the sidebar, you should see Alerts on for this form.</li>
+<li>The rule is active. On Free, one rule runs at a time across your account, so check it's the rule you picked.</li>
+<li>The answer matches the rule. For a text question with the is condition, check capital letters and spaces: the whole answer must match. For contains, check that the answer includes the text you entered. If an answer doesn't match the rule, you won't send an email for it. You might see no log entry for that response.</li>
+<li>Alerts need reconnecting. If prompted, choose Reconnect alerts. You won't automatically send emails for earlier responses after reconnecting.</li>
+<li>The response is old. You won't send an email automatically for a response processed 48 hours or more after submission.</li>
 </ol>
 
 <h3>If there is an entry</h3>
 <ul class="ruled">
-  <li><span class="k">Sent</span><span class="v">Google accepted the email for sending. It doesn't confirm it reached the inbox, so ask the recipient to check spam.</span></li>
+  <li><span class="k">Sent</span><span class="v">Google accepted the email for sending. You can't tell from this whether it reached the inbox, so ask the recipient to check spam.</span></li>
   <li><span class="k">Failed</span><span class="v">For Failed, you see a reason when one is available, such as reaching your Google account's daily sending limit.</span></li>
   <li><span class="k">Unknown</span><span class="v">Google didn't confirm whether it was sent. It may already have gone out.</span></li>
   <li><span class="k">Processing</span><span class="v">The send is still in progress. Refresh again in a moment.</span></li>
 </ul>
-<p>For eligible Failed or Unknown entries, you can use Review and resend. Resending an Unknown entry may send a duplicate, and you see a warning first. When you resend, you use the current rule and response, not a saved copy of the original email.</p>
+<p>For eligible Failed or Unknown entries, you can use Review and resend. If you resend an Unknown entry, the person may get it twice. You see a warning first. When you resend, you use the current rule and response, not a saved copy of the original email.</p>
 
 <h3>Google's daily sending limit</h3>
 <p>You send from your own Google account, so Google's limits for that account apply. Google sets a daily recipient limit for email sent this way, and it is lower for personal Gmail accounts than for Google Workspace accounts. Google lists the current numbers on its <a href="https://developers.google.com/apps-script/guides/services/quotas">quotas page</a>. In Answerfinch, open Plan, then Details and data. Under Sending limits, check Google's remaining recipients and the observation time. Test emails count too.</p>

@@ -22,4 +22,4 @@ Answerfinch is made by Lazy Labs. It is not related to other products named Finc
 
 - [Privacy policy](https://answerfinch.com/privacy.html)
 - [Terms](https://answerfinch.com/terms.html)
-- [Support](https://answerfinch.com/support.html): runredteam@gmail.com
+- [Support](https://answerfinch.com/support.html): support@answerfinch.com

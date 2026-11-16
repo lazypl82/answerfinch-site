@@ -11,7 +11,7 @@ def esc(s): return html.escape(s, quote=True)
 
 LOGO = SITE + "/icon-512.png"
 ORG = {"@type": "Organization", "@id": SITE + "/#lazylabs", "name": "Lazy Labs", "url": SITE + "/",
-       "email": "runredteam@gmail.com", "logo": {"@type": "ImageObject", "url": LOGO, "width": 512, "height": 512}}
+       "email": "support@answerfinch.com", "logo": {"@type": "ImageObject", "url": LOGO, "width": 512, "height": 512}}
 ICONS = ('<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">\n'
          '<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">\n'
          '<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">\n'
@@ -55,7 +55,7 @@ def jsonld(kind, page):
         return '<script type="application/ld+json">' + json.dumps(d, ensure_ascii=False) + '</script>\n'
     if kind == 'organization':
         d = {"@context": "https://schema.org", "@type": "Organization", "name": "Lazy Labs",
-             "url": SITE + "/", "email": "runredteam@gmail.com",
+             "url": SITE + "/", "email": "support@answerfinch.com",
              "brand": [{"@type": "Brand", "name": "Answerfinch"}, {"@type": "Brand", "name": "Pollfold"}]}
     else:
         return ''

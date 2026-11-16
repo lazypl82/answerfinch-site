@@ -13,6 +13,17 @@
       "jsonld": "software"
     },
     {
+      "file": "help/index.html",
+      "path": "/help/",
+      "priority": "0.8"
+    },
+    {
+      "file": "help/faq.html",
+      "path": "/help/faq.html",
+      "priority": "0.8",
+      "jsonld": "faq"
+    },
+    {
       "file": "help/conditional-email-notifications.html",
       "path": "/help/conditional-email-notifications.html",
       "type": "article",

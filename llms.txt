@@ -1,0 +1,25 @@
+# Answerfinch
+
+> Answerfinch is a Google Forms™ add-on by Lazy Labs. You use it to email the right person when a form answer matches your rule, for example sending refund requests to billing or a personalized confirmation to the respondent. Free plan: one rule at a time across your Google account, with every condition type. Pro: $4 a month or $29 a year, taxes included.
+
+Answerfinch is not related to other products named Finch. It runs in Google Forms and is installed from the Google Workspace Marketplace.
+
+## Product
+
+- [Home](https://answerfinch.com/): what Answerfinch does, pricing and limits
+- [Install from Google Workspace Marketplace](https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notificati/602427031339)
+
+## Guides
+
+- [Set up answer-based notifications](https://answerfinch.com/help/conditional-email-notifications.html): install, first rule, preview and test
+- [FAQ](https://answerfinch.com/help/faq.html): free plan, limits, privacy, why an email may not arrive
+- [Personalized confirmation emails](https://answerfinch.com/help/personalized-confirmation-email.html)
+- [Three answer-based recipes](https://answerfinch.com/help/conditional-email-recipes.html)
+- [Conference sign-up confirmations](https://answerfinch.com/help/conference-signup-confirmation.html)
+- [How to choose an email add-on for Google Forms](https://answerfinch.com/help/choose-google-forms-email-add-on.html)
+
+## Policies
+
+- [Privacy policy](https://answerfinch.com/privacy.html)
+- [Terms](https://answerfinch.com/terms.html)
+- [Support](https://answerfinch.com/support.html): runredteam@gmail.com

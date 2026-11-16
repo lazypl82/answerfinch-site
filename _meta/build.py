@@ -40,6 +40,18 @@ def jsonld(kind, page):
              "publisher": {"@id": SITE + "/#lazylabs"}}]
         d = {"@context": "https://schema.org", "@graph": graph}
         return '<script type="application/ld+json">' + json.dumps(d, ensure_ascii=False) + '</script>\n'
+    if kind == 'faq':
+        body = open(page['file'], encoding='utf-8').read()
+        qa = []
+        for sec in re.findall(r'<section class="section"[^>]*>(.*?)</section>', body, re.S):
+            q = re.search(r'<h2>(.*?)</h2>', sec, re.S)
+            if not q: continue
+            a = re.sub(r'<h2>.*?</h2>', '', sec, flags=re.S)
+            a = html.unescape(re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', a))).strip()
+            a = re.sub(r' ([,.])', r'\1', a)
+            qa.append({"@type": "Question", "name": html.unescape(q.group(1).strip()), "acceptedAnswer": {"@type": "Answer", "text": a}})
+        d = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": qa}
+        return '<script type="application/ld+json">' + json.dumps(d, ensure_ascii=False) + '</script>\n'
     if kind == 'organization':
         d = {"@context": "https://schema.org", "@type": "Organization", "name": "Lazy Labs",
              "url": SITE + "/", "email": "runredteam@gmail.com",
@@ -86,7 +98,9 @@ for p in cfg['pages']:
     urls.append((url, p.get('lastmod'), p.get('priority', '0.5')))
 
 with open('robots.txt', 'w') as r:
-    r.write('User-agent: *\n' + (''.join(f'Disallow: /{n}\n' for n in cfg['noindex']) or 'Allow: /\n') + f'\nSitemap: {SITE}/sitemap.xml\n')
+    body = ''.join(f'Disallow: /{n}\n' for n in cfg['noindex']) or 'Allow: /\n'
+    bots = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'PerplexityBot', 'Google-Extended', 'Bingbot']
+    r.write('User-agent: *\n' + body + ''.join(f'\nUser-agent: {b}\n' + body for b in bots) + f'\nSitemap: {SITE}/sitemap.xml\n')
 with open('sitemap.xml', 'w') as m:
     m.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
     for u, d, pr in urls:

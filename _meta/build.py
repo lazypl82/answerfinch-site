@@ -19,7 +19,8 @@ ICONS = ('<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">\n'
          '<link rel="icon" type="image/svg+xml" href="/assets/answerfinch-mark.svg">\n'
          '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
          '<link rel="manifest" href="/site.webmanifest">\n'
-         '<meta name="theme-color" content="#1C1C1E">\n')
+         '<meta name="theme-color" content="#1C1C1E">\n'
+         '<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{"token": "c19460813e6543029489f478b595bb10"}\'></script>\n')
 
 def jsonld(kind, page):
     if kind == 'software':

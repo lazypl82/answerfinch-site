@@ -9,21 +9,41 @@ SITE = cfg['site']; IMG = SITE + cfg['default_image']; MP = cfg['marketplace']
 
 def esc(s): return html.escape(s, quote=True)
 
+LOGO = SITE + "/icon-512.png"
+ORG = {"@type": "Organization", "@id": SITE + "/#lazylabs", "name": "Lazy Labs", "url": SITE + "/",
+       "email": "runredteam@gmail.com", "logo": {"@type": "ImageObject", "url": LOGO, "width": 512, "height": 512}}
+ICONS = ('<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">\n'
+         '<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">\n'
+         '<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">\n'
+         '<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">\n'
+         '<link rel="icon" type="image/svg+xml" href="/assets/answerfinch-mark.svg">\n'
+         '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
+         '<link rel="manifest" href="/site.webmanifest">\n'
+         '<meta name="theme-color" content="#1C1C1E">\n')
+
 def jsonld(kind, page):
+    if kind == 'software':
+        graph = [
+            {"@type": "WebSite", "@id": SITE + "/#website", "name": "Answerfinch",
+             "alternateName": ["Answerfinch for Google Forms", "answerfinch.com"], "url": SITE + "/",
+             "publisher": {"@id": SITE + "/#lazylabs"}},
+            dict(ORG),
+            {"@type": "SoftwareApplication", "@id": SITE + "/#app", "name": "Answerfinch",
+             "alternateName": "Answerfinch: Conditional Email Notifications",
+             "applicationCategory": "BusinessApplication", "applicationSubCategory": "Google Forms add-on",
+             "operatingSystem": "Web (Google Forms add-on)",
+             "url": SITE + page['path'], "installUrl": MP, "sameAs": [MP], "description": page['description'],
+             "image": IMG, "logo": LOGO,
+             "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"},
+                        {"@type": "Offer", "name": "Pro, monthly", "price": "4", "priceCurrency": "USD"},
+                        {"@type": "Offer", "name": "Pro, yearly", "price": "29", "priceCurrency": "USD"}],
+             "publisher": {"@id": SITE + "/#lazylabs"}}]
+        d = {"@context": "https://schema.org", "@graph": graph}
+        return '<script type="application/ld+json">' + json.dumps(d, ensure_ascii=False) + '</script>\n'
     if kind == 'organization':
         d = {"@context": "https://schema.org", "@type": "Organization", "name": "Lazy Labs",
              "url": SITE + "/", "email": "runredteam@gmail.com",
              "brand": [{"@type": "Brand", "name": "Answerfinch"}, {"@type": "Brand", "name": "Pollfold"}]}
-    elif kind == 'software':
-        d = {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Answerfinch",
-             "alternateName": "Answerfinch: Conditional Email Notifications",
-             "applicationCategory": "BusinessApplication", "operatingSystem": "Web (Google Forms add-on)",
-             "url": SITE + page['path'], "installUrl": MP, "description": page['description'],
-             "image": IMG,
-             "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"},
-                        {"@type": "Offer", "name": "Pro, monthly", "price": "4", "priceCurrency": "USD"},
-                        {"@type": "Offer", "name": "Pro, yearly", "price": "29", "priceCurrency": "USD"}],
-             "publisher": {"@type": "Organization", "name": "Lazy Labs", "url": SITE + "/"}}
     else:
         return ''
     return '<script type="application/ld+json">' + json.dumps(d, ensure_ascii=False) + '</script>\n'
@@ -46,6 +66,7 @@ for p in cfg['pages']:
         desc = html.unescape(m.group(1))
     s = re.sub(r'\s*<meta name="description" content="[^"]*">', '', s)
     s = re.sub(r'\s*<!-- meta:start -->.*?<!-- meta:end -->', '', s, flags=re.S)
+    s = re.sub(r'\s*<link rel="icon" type="image/svg\+xml" href="[^"]*answerfinch-mark\.svg">', '', s)
     url = SITE + p['path']
     block = ('<!-- meta:start -->\n'
              f'<meta name="description" content="{esc(desc)}">\n'
@@ -57,6 +78,7 @@ for p in cfg['pages']:
              f'<meta property="og:url" content="{url}">\n'
              f'<meta property="og:image" content="{IMG}">\n'
              '<meta name="twitter:card" content="summary_large_image">\n'
+             + ICONS
              + (jsonld(p.get('jsonld'), {**p, 'description': desc}) if p.get('jsonld') else '') +
              '<!-- meta:end -->')
     s = re.sub(r'(</title>)', r'\1\n' + block.replace('\\', '\\\\'), s, count=1)

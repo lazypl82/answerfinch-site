@@ -9,7 +9,7 @@
       "type": "website",
       "priority": "1.0",
       "title": "Answerfinch: Conditional email notifications for Google Forms",
-      "description": "With Answerfinch, a Google Forms add-on by Lazy Labs, you can automatically email the right person when an answer matches your rule. On Free you run one rule at a time across your Google account. Pro is $4 a month or $29 a year.",
+      "description": "Answerfinch is a Google Forms™ add-on that sends emails based on form answers. On Free you run one rule at a time across your Google account. Pro is $4 a month or $29 a year.",
       "jsonld": "software"
     },
     {

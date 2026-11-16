@@ -1,6 +1,6 @@
 # Answerfinch
 
-> Answerfinch is a Google Forms™ add-on by Lazy Labs. You use it to email the right person when a form answer matches your rule, for example sending refund requests to billing or a personalized confirmation to the respondent. Free plan: one rule at a time across your Google account, with every condition type. Pro: $4 a month or $29 a year, taxes included.
+> Answerfinch is a Google Forms™ add-on by Lazy Labs. You use it to email the right person when a form answer matches your rule. For example, email billing when someone requests a refund. Free plan: one rule at a time across your Google account, with every condition type. Pro: $4 a month or $29 a year, taxes included.
 
 Answerfinch is not related to other products named Finch. It runs in Google Forms and is installed from the Google Workspace Marketplace.
 

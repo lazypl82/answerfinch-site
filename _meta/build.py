@@ -33,7 +33,7 @@ def jsonld(kind, page):
              "applicationCategory": "BusinessApplication", "applicationSubCategory": "Google Forms add-on",
              "operatingSystem": "Web (Google Forms add-on)",
              "url": SITE + page['path'], "installUrl": MP, "sameAs": [MP], "description": page['description'],
-             "image": IMG, "logo": LOGO,
+             "image": IMG,
              "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"},
                         {"@type": "Offer", "name": "Pro, monthly", "price": "4", "priceCurrency": "USD"},
                         {"@type": "Offer", "name": "Pro, yearly", "price": "29", "priceCurrency": "USD"}],

@@ -64,14 +64,14 @@
   MailApp.sendEmail(recipient, 'New refund request',
     'Someone selected Refund. Open the form to review the response.');
 }</code></pre>
-    <p>The code checks the question title and the answer exactly. If you rename the question or the choice, update the script. Keep the question title unique. The message doesn't include the person's answers or their address.</p>
+    <p>Use the exact question title and choice in the code. If you rename either one, update the script. Keep the question title unique. You get an email saying someone selected Refund. You won't see their address or other answers in the message.</p>
   </section>
 
   <section class="section">
     <h2>Add the trigger and submit a response</h2>
     <ol>
-      <li>In Apps Script, open <b>Triggers</b> and choose <b>Add Trigger</b>. For the function, select <code>emailOnFormSubmit</code>. Set the event source to <b>From form</b> and the event type to <b>On form submit</b>.</li>
-      <li>Save the trigger. Review the permissions before you authorize the script. The trigger runs as the Google account that installs it.</li>
+      <li>In Apps Script, open <b>Triggers</b> and choose <b>Add Trigger</b>. For the function, select <code>emailOnFormSubmit</code>. Set the event source to <b>From form</b> and the event type to <b>On form submit</b>. Choose <b>Save</b>.</li>
+      <li>Review the permissions to read form responses and send email before you authorize the script. Install the trigger with the Google account you want to send from.</li>
       <li>Submit the test form as a respondent. Choose Refund, then check your inbox. Submit another response with Other. The script skips that response.</li>
     </ol>
     <p>Use the real submit button for the test. The editor's <b>Run</b> button doesn't supply the <a href="https://developers.google.com/apps-script/guides/triggers/events#google_forms_events">form event</a>. Google uses a different event object for a Sheets form submit trigger. If the email doesn't arrive, check <b>Executions</b> in Apps Script and look in spam.</p>

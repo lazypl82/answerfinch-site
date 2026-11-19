@@ -33,22 +33,23 @@
 </header>
 <main>
   <h1>Send different Google Forms confirmation emails based on an answer</h1>
-  <p class="dek">If your Google Forms™ respondents need different instructions, write a separate confirmation for each answer. Each rule emails the person who filled in the form. On Free you can run one rule at a time across your Google account. You need Pro to run both at once.</p>
+  <p class="dek">If your Google Forms™ respondents need different instructions, write a separate confirmation for each answer. Send each message to the person who filled in the form. On Free you can run one rule at a time across your Google account. You need Pro to run both at once.</p>
   <p class="soft">By Lazy Labs. <time datetime="2026-11-19">November 19, 2026</time>. Steps checked against Answerfinch v8.</p>
 
   <section class="section">
     <h2>Give each person one way to answer</h2>
     <p>Make “How will you attend?” a required <a href="https://support.google.com/docs/answer/7322334?hl=en">Multiple choice question</a>. Use Online and In person as the options. Each respondent selects one option, so the two rules below can't both match the same answer.</p>
-    <p>If you <a href="https://support.google.com/docs/answer/139706?hl=en">collect email addresses in Google Forms</a>, you can use the collected address. Otherwise, add a short-answer email question and set email validation. If Answerfinch can't check whether collection is on, choose a question that holds the respondent's address.</p>
+    <p>If you <a href="https://support.google.com/docs/answer/139706?hl=en">collect email addresses in Google Forms</a>, you can use the collected address. Otherwise, add a required <b>Short answer</b> question for the email address and <a href="https://support.google.com/docs/answer/3378864/">set email validation</a>. If Answerfinch can't check whether collection is on, choose the question that holds the respondent's address.</p>
   </section>
 
   <section class="section">
     <h2>Write a rule for each answer</h2>
+    <p>If you see <b>Run this rule on Free instead</b> when you open a new rule, choose it to open the editor. You can choose which rule runs after you save.</p>
     <ol>
       <li>Open Answerfinch from the add-on menu. If prompted, choose <b>Start in this form</b>. Choose <b>Create a rule</b>, or <b>New rule</b> if you already saved a rule here.</li>
-      <li>Under <b>When</b>, pick “How will you attend?”, choose <b>is</b>, and select Online. Under <b>Send to</b>, pick <b>The person who filled in the form</b>. Choose <b>Email collected by Google Forms</b> or your email question, as appropriate.</li>
+      <li>Enter “Online instructions” in <b>Rule name</b>. Under <b>When</b>, pick “How will you attend?”, choose <b>is</b>, and select Online. Under <b>Send to</b>, pick <b>The person who filled in the form</b>. Choose <b>Email collected by Google Forms</b> or your email question.</li>
       <li>Write a subject such as “How to join the online session.” Include your meeting link and the start time. Choose <b>Save</b>, then <b>Save rule</b>.</li>
-      <li>Make another rule with <b>is</b> and In person. Choose the same respondent address source. Write a message with the location and check-in instructions. Save this rule too.</li>
+      <li>Choose <b>New rule</b> and enter “In-person instructions” in <b>Rule name</b>. Pick the same question. Choose <b>is</b> and select In person. Choose the same respondent address source. Write a subject and a message with the location and check-in instructions. Choose <b>Save</b>, then <b>Save rule</b>.</li>
     </ol>
     <p>Write what the person needs to do next. If you need a detail from their answer, such as their name, put your cursor in the subject or message and choose <b>Insert answer</b>.</p>
   </section>
@@ -58,9 +59,10 @@
     <ol>
       <li>In a test copy, submit an Online response and an In person response. Use your own address for both.</li>
       <li>Open each rule and check the subject, address and message in <b>Preview</b> with the corresponding response. If you see <b>Select a response</b>, choose your sample. If you see <b>Latest response (no recent match)</b>, check that you picked the right response and rule.</li>
-      <li>If you see <b>Preview and test</b>, choose it and confirm with <b>Turn on alerts and send test</b>. Otherwise turn on alerts and use <b>Send me a test</b>. The test goes to you.</li>
+      <li>Turn on alerts. On Free, if you need to switch rules, choose <b>Keep this rule on Free</b> for the rule you want to test and confirm the switch. Then choose <b>Send me a test</b>. Check the sample and choose <b>Send test to myself</b>.</li>
     </ol>
-    <p>On Free, select <b>Keep this rule on Free</b> if you need to test the other rule. Switching pauses the previous rule. To check what happens when both rules run, use Pro and submit fresh sample responses after both are active. Check the messages in your inbox as well as <b>Send log</b>.</p>
+    <p>If you test your first rule before you add the second, you can use <b>Preview and test</b> when it appears. Check the sample and choose <b>Turn on alerts and send test</b>. Both test paths send the email to you.</p>
+    <p>On Free, when you choose the other rule, you pause the one you were using. To check what happens when both rules run, use Pro and submit fresh sample responses after both are active. Check the messages in your inbox as well as <b>Send log</b>.</p>
   </section>
 
   <section class="section">

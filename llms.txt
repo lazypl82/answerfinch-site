@@ -7,7 +7,7 @@ Answerfinch is made by Lazy Labs. It is not related to other products named Finc
 ## Product
 
 - [Home](https://answerfinch.com/): what Answerfinch does, pricing and limits
-- [Install from Google Workspace Marketplace](https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notificati/602427031339)
+- [Install from Google Workspace Marketplace](https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notificati/602427031339?utm_source=answerfinch.com&utm_medium=help&utm_campaign=llms)
 
 ## Guides
 
@@ -18,6 +18,10 @@ Answerfinch is made by Lazy Labs. It is not related to other products named Finc
 - [Three answer-based recipes](https://answerfinch.com/help/conditional-email-recipes.html)
 - [Conference sign-up confirmations](https://answerfinch.com/help/conference-signup-confirmation.html)
 - [How to choose an email add-on for Google Forms](https://answerfinch.com/help/choose-google-forms-email-add-on.html)
+- [Email different people based on checkbox answers](https://answerfinch.com/help/email-recipients-by-checkbox-answer.html): Group checkbox choices that should go to the same team.
+- [Send a different confirmation by answer](https://answerfinch.com/help/different-confirmation-emails-by-answer.html): Send different instructions to respondents based on one choice.
+- [Compare free ways to send conditional email](https://answerfinch.com/help/free-conditional-email-options.html): See what you can do with built-in settings, a script, a workflow tool or an add-on.
+- [Send email by answer with Apps Script](https://answerfinch.com/help/apps-script-email-by-form-answer.html): Try a form submit trigger and decide when to keep your own code.
 
 ## Policies
 

@@ -58,7 +58,45 @@
       "file": "help/choose-google-forms-email-add-on.html",
       "path": "/help/choose-google-forms-email-add-on.html",
       "type": "article",
-      "priority": "0.8"
+      "priority": "0.8",
+      "description": "What to check when you pick a Google Forms email add-on. Compare plan limits, conditions and recipients, with dates and product sources.",
+      "lastmod": "2026-11-19"
+    },
+    {
+      "file": "help/email-recipients-by-checkbox-answer.html",
+      "path": "/help/email-recipients-by-checkbox-answer.html",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Email different people based on Google Forms checkbox answers | Answerfinch",
+      "description": "Send Google Forms checkbox answers to different people. See how to group choices for one inbox and test two routes from one response.",
+      "lastmod": "2026-11-19"
+    },
+    {
+      "file": "help/different-confirmation-emails-by-answer.html",
+      "path": "/help/different-confirmation-emails-by-answer.html",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Send different Google Forms confirmation emails based on an answer | Answerfinch",
+      "description": "Send different confirmation emails to Google Forms respondents. Write one message for each answer and check both messages before you share the form.",
+      "lastmod": "2026-11-19"
+    },
+    {
+      "file": "help/free-conditional-email-options.html",
+      "path": "/help/free-conditional-email-options.html",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Free ways to send conditional emails from Google Forms | Answerfinch",
+      "description": "Compare ways to send email when a Google Forms answer matches. Check built-in settings, Apps Script, Workspace Studio, workflow tools and add-ons.",
+      "lastmod": "2026-11-19"
+    },
+    {
+      "file": "help/apps-script-email-by-form-answer.html",
+      "path": "/help/apps-script-email-by-form-answer.html",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Send email based on a Google Forms answer with Apps Script | Answerfinch",
+      "description": "Write a form-bound Apps Script that sends an email when a Google Forms answer matches. Test a form submit trigger and decide when to use an add-on.",
+      "lastmod": "2026-11-19"
     },
     {
       "file": "support.html",

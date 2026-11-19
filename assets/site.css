@@ -39,6 +39,8 @@ a:focus-visible { outline:2px solid var(--ink); outline-offset:2px; box-shadow:0
 .soft { color:var(--soft); font-size:18px; line-height:32px; }
 hr { border:0; border-top:1px solid var(--rule); margin:64px 0 32px; }
 code { font:500 15px/24px var(--sans); background:#f1eee6; padding:2px 6px; border-radius:4px; overflow-wrap:anywhere; }
+.script-example { margin:16px 0; font:400 14px/24px ui-monospace,monospace; white-space:pre-wrap; overflow-wrap:anywhere; }
+.script-example code { font:inherit; padding:0; background:none; }
 
 /* Sections with a short marigold marker */
 .section { margin-top:80px; padding-top:32px; border-top:1px solid var(--rule); }

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Send email based on a Google Forms answer with Apps Script | Answerfinch</title>
+<!-- meta:start -->
+<meta name="description" content="Write a form-bound Apps Script that sends an email when a Google Forms answer matches. Test a form submit trigger and decide when to use an add-on.">
+<link rel="canonical" href="https://answerfinch.com/help/apps-script-email-by-form-answer.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Answerfinch by Lazy Labs">
+<meta property="og:title" content="Send email based on a Google Forms answer with Apps Script | Answerfinch">
+<meta property="og:description" content="Write a form-bound Apps Script that sends an email when a Google Forms answer matches. Test a form submit trigger and decide when to use an add-on.">
+<meta property="og:url" content="https://answerfinch.com/help/apps-script-email-by-form-answer.html">
+<meta property="og:image" content="https://answerfinch.com/assets/og-answerfinch-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/svg+xml" href="/assets/answerfinch-mark.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C1C1E">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c19460813e6543029489f478b595bb10"}'></script>
+<!-- meta:end -->
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="../index.html"><img src="../assets/answerfinch-mark.svg" alt="">Answerfinch</a>
+  <nav><a href="index.html" aria-current="page">Guides</a><a href="../index.html#pricing">Pricing</a><a href="https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notificati/602427031339?utm_source=answerfinch.com&amp;utm_medium=help&amp;utm_campaign=apps-script-email-by-form-answer">Install</a></nav>
+</header>
+<main>
+  <h1>Send email based on a Google Forms answer with Apps Script</h1>
+  <p class="dek">You can use a form submit trigger to read an answer and send an email only when it matches. Use the example below to email yourself when someone selects Refund. Use an add-on if you want to set that kind of rule inside the form without maintaining the script.</p>
+  <p class="soft">By Lazy Labs. <time datetime="2026-11-19">November 19, 2026</time>. Example checked against the linked Apps Script documentation.</p>
+
+  <section class="section">
+    <h2>Make a test form and add the script</h2>
+    <ol>
+      <li>In a test form, add one required multiple choice question titled “Request type.” Add Refund and Other as the choices, with “Other” entered as a regular choice.</li>
+      <li>Open <b>More</b>, then <b>Apps Script</b>, from the form editor. This <a href="https://developers.google.com/apps-script/guides/bound">binds the script to the form</a>. Don't open Apps Script from the linked response spreadsheet for this example.</li>
+      <li>Paste the code below. Replace <code>you@example.test</code> with your own address. Save the project.</li>
+    </ol>
+    <pre class="script-example"><code>function emailOnFormSubmit(e) {
+  const recipient = 'you@example.test';
+  if (recipient.endsWith('@example.test')) {
+    throw new Error('Set your own test email address first.');
+  }
+  if (!e || !e.response) {
+    throw new Error('Submit the test form to run this function.');
+  }
+
+  const items = e.response.getItemResponses();
+  const matching = items.filter(
+    item =&gt; item.getItem().getTitle() === 'Request type'
+  );
+
+  if (matching.length !== 1 || matching[0].getResponse() !== 'Refund') {
+    return;
+  }
+
+  MailApp.sendEmail(recipient, 'New refund request',
+    'Someone selected Refund. Open the form to review the response.');
+}</code></pre>
+    <p>The code checks the question title and the answer exactly. If you rename the question or the choice, update the script. Keep the question title unique. The message doesn't include the person's answers or their address.</p>
+  </section>
+
+  <section class="section">
+    <h2>Add the trigger and submit a response</h2>
+    <ol>
+      <li>In Apps Script, open <b>Triggers</b> and choose <b>Add Trigger</b>. For the function, select <code>emailOnFormSubmit</code>. Set the event source to <b>From form</b> and the event type to <b>On form submit</b>.</li>
+      <li>Save the trigger. Review the permissions before you authorize the script. The trigger runs as the Google account that installs it.</li>
+      <li>Submit the test form as a respondent. Choose Refund, then check your inbox. Submit another response with Other. The script skips that response.</li>
+    </ol>
+    <p>Use the real submit button for the test. The editor's <b>Run</b> button doesn't supply the <a href="https://developers.google.com/apps-script/guides/triggers/events#google_forms_events">form event</a>. Google uses a different event object for a Sheets form submit trigger. If the email doesn't arrive, check <b>Executions</b> in Apps Script and look in spam.</p>
+    <p>See Google's docs for <a href="https://developers.google.com/apps-script/guides/triggers/installable">installable triggers</a>, <a href="https://developers.google.com/apps-script/reference/mail/mail-app">MailApp</a> and <a href="https://developers.google.com/apps-script/guides/services/quotas">current sending limits</a>. This is a test example. It doesn't keep a send log or prevent duplicate sends if you install more than one matching trigger.</p>
+  </section>
+
+  <section class="section">
+    <h2>When to use an add-on, and when to keep the script</h2>
+    <p>With Answerfinch, choose the question, <b>is</b>, Refund and <b>This address</b>. You can preview the message with a sample response, send yourself a test and check recorded attempts in <b>Send log</b>. On Free you can run one rule at a time across your Google account.</p>
+    <p>Keep your script if you need to match two separate questions in one rule or look up a recipient in another system. Answerfinch matches one question per rule. You choose a fixed address or the respondent's address from the form.</p>
+    <p>If you already send these emails from a script, test the new rule on a form copy first. When you switch the live form, disable only the old trigger you have confirmed sends the same email. If someone else owns that trigger, ask them to check it with you. Submit a fresh test after switching and check that you get one email.</p>
+  </section>
+
+  <section class="section">
+    <h2>Related guides</h2>
+    <ul>
+    <li><a href="free-conditional-email-options.html">Compare ways to send conditional email</a></li>
+    <li><a href="conditional-email-notifications.html">Set up your first rule</a></li>
+    <li><a href="email-notifications-not-working.html">Check a missing email</a></li>
+    <li><a href="index.html">All guides</a></li>
+    </ul>
+  </section>
+
+  <div class="cta"><a href="https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notificati/602427031339?utm_source=answerfinch.com&amp;utm_medium=help&amp;utm_campaign=apps-script-email-by-form-answer">Install Answerfinch</a><span>Free plan included</span></div>
+</main>
+<footer>
+  Answerfinch is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:support@answerfinch.com">support@answerfinch.com</a> · <a href="../support.html">Support</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a><br>
+  Google Forms is a trademark of Google LLC.
+</footer>
+</body>
+</html>

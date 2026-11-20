@@ -99,6 +99,24 @@
       "lastmod": "2026-11-19"
     },
     {
+      "file": "help/email-notifications-multiple-people.html",
+      "path": "/help/email-notifications-multiple-people.html",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Send Google Forms email notifications to multiple people | Answerfinch",
+      "description": "Send the same Google Forms response notification to multiple people. See when to use personal alerts, a Google Group address or one rule per address.",
+      "lastmod": "2026-11-20"
+    },
+    {
+      "file": "help/email-notifications-with-responses.html",
+      "path": "/help/email-notifications-with-responses.html",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Get Google Forms email notifications with responses included | Answerfinch",
+      "description": "Put Google Forms answers in the notification email you receive. Choose your own address, insert the questions you need and preview the message.",
+      "lastmod": "2026-11-20"
+    },
+    {
       "file": "support.html",
       "path": "/support.html",
       "type": "website",

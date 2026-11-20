@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Send Google Forms email notifications to multiple people | Answerfinch</title>
+<!-- meta:start -->
+<meta name="description" content="Send the same Google Forms response notification to multiple people. See when to use personal alerts, a Google Group address or one rule per address.">
+<link rel="canonical" href="https://answerfinch.com/help/email-notifications-multiple-people.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Answerfinch by Lazy Labs">
+<meta property="og:title" content="Send Google Forms email notifications to multiple people | Answerfinch">
+<meta property="og:description" content="Send the same Google Forms response notification to multiple people. See when to use personal alerts, a Google Group address or one rule per address.">
+<meta property="og:url" content="https://answerfinch.com/help/email-notifications-multiple-people.html">
+<meta property="og:image" content="https://answerfinch.com/assets/og-answerfinch-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/svg+xml" href="/assets/answerfinch-mark.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C1C1E">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c19460813e6543029489f478b595bb10"}'></script>
+<!-- meta:end -->
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="../index.html"><img src="../assets/answerfinch-mark.svg" alt="">Answerfinch</a>
+  <nav><a href="index.html" aria-current="page">Guides</a><a href="../index.html#pricing">Pricing</a><a href="https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notificati/602427031339?utm_source=answerfinch.com&amp;utm_medium=help&amp;utm_campaign=email-notifications-multiple-people">Install</a></nav>
+</header>
+<main>
+  <h1>Send Google Forms email notifications to multiple people</h1>
+  <p class="dek">In Google Forms™, you get built-in response alerts at your own address when you turn them on. Each form editor can turn on their own alerts. To notify people who don't edit the form, use one Google Group address with Answerfinch Free or run a rule for each address with Pro.</p>
+  <p class="soft">By Lazy Labs. <time datetime="2026-11-20">November 20, 2026</time>. Steps checked against Answerfinch v8.</p>
+
+  <section class="section">
+    <h2>When everyone already edits the form</h2>
+    <p>Ask each person to open the form in their own Google account. In <b>Responses</b>, open <b>More</b> and select <b>Get email notifications for new responses</b>. Follow <a href="https://support.google.com/docs/answer/139706?hl=en">Google's steps for response notifications</a>.</p>
+  </section>
+
+  <section class="section">
+    <h2>Send one email to a Google Group on Free</h2>
+    <p>Use the group's email address if everyone should get the same message. You can do this with one rule on Free. On Free you can run one rule at a time across your Google account.</p>
+    <p>Ask the group owner to allow email posting and check <b>Who can post</b> for the Google account you use to send alerts. If that account is outside the group or its organization, make sure the group allows it to post from outside. See <a href="https://support.google.com/groups/answer/2464926?hl=en">Google's group settings</a>.</p>
+    <p>Ask members to choose <b>Each email</b> if they want every message in their own inbox. See <a href="https://support.google.com/groups/answer/9792489?hl=en">Google's subscription settings</a>.</p>
+  </section>
+
+  <section class="section">
+    <h2>Set up the notification</h2>
+    <ol>
+      <li>Open Answerfinch from the form's add-on menu. If prompted, choose <b>Start in this form</b>. Choose <b>Create a rule</b> or <b>New rule</b>. If you see <b>Run this rule on Free instead</b>, choose it to open the editor.</li>
+      <li>Enter a <b>Rule name</b>. For every new response, pick a required question in the first section that everyone answers. Choose <b>is not empty</b>. To send for a specific answer, choose <b>is</b> and pick the answer instead.</li>
+      <li>Under <b>Send to</b>, choose <b>This address</b> and enter the group address. Write the subject and message. Choose <b>Save</b>, then <b>Save rule</b>.</li>
+    </ol>
+    <p>If you want to enter each address yourself, use Pro to run several rules together. Keep the same condition and message in each rule and enter one address per rule. When a response matches more than one active rule, expect one send attempt per matching rule. You can't enter several addresses on a rule or add CC or BCC.</p>
+  </section>
+
+  <section class="section">
+    <h2>Check who gets the email</h2>
+    <p>Turn on alerts and make sure the rules you want to check are running. On Free, if the group rule is paused, choose <b>Keep this rule on Free</b> and confirm the switch.</p>
+    <p>A test from <b>Send me a test</b> goes to you. To check the group or the individual addresses, submit a fresh sample response to a test form after you turn alerts on. Ask the recipients to check their inboxes. In <b>Send log</b>, <b>Sent</b> means Google accepted the email for sending.</p>
+  </section>
+
+  <section class="section">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="conditional-email-notifications.html">Set up and test your first rule</a></li>
+      <li><a href="email-recipients-by-checkbox-answer.html">Send to different people based on checkbox answers</a></li>
+      <li><a href="email-notifications-with-responses.html">Include answers in your own notification email</a></li>
+    </ul>
+  </section>
+
+  <div class="cta"><a href="https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notificati/602427031339?utm_source=answerfinch.com&amp;utm_medium=help&amp;utm_campaign=email-notifications-multiple-people">Install Answerfinch</a><span>Free plan included</span></div>
+</main>
+<footer>
+  Answerfinch is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:support@answerfinch.com">support@answerfinch.com</a> · <a href="../support.html">Support</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a><br>
+  Google Forms is a trademark of Google LLC.
+</footer>
+</body>
+</html>

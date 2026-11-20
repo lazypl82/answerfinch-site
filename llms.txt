@@ -22,6 +22,8 @@ Answerfinch is made by Lazy Labs. It is not related to other products named Finc
 - [Send a different confirmation by answer](https://answerfinch.com/help/different-confirmation-emails-by-answer.html): Send different instructions to respondents based on one choice.
 - [Compare free ways to send conditional email](https://answerfinch.com/help/free-conditional-email-options.html): See what you can do with built-in settings, a script, a workflow tool or an add-on.
 - [Send email by answer with Apps Script](https://answerfinch.com/help/apps-script-email-by-form-answer.html): Try a form submit trigger and decide when to keep your own code.
+- [Notify multiple people about one response](https://answerfinch.com/help/email-notifications-multiple-people.html): Send to a Google Group or make a rule for each address.
+- [Include answers in your own notification](https://answerfinch.com/help/email-notifications-with-responses.html): Use Insert answer to put selected answers in the email you receive.
 
 ## Policies
 

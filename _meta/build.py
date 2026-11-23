@@ -30,7 +30,6 @@ def jsonld(kind, page):
              "publisher": {"@id": SITE + "/#lazylabs"}},
             dict(ORG),
             {"@type": "SoftwareApplication", "@id": SITE + "/#app", "name": "Answerfinch",
-             "alternateName": "Answerfinch: Conditional Email Notifications",
              "applicationCategory": "BusinessApplication", "applicationSubCategory": "Google Forms add-on",
              "operatingSystem": "Web (Google Forms add-on)",
              "url": SITE + page['path'], "installUrl": MP, "sameAs": [MP], "description": page['description'],

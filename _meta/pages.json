@@ -34,7 +34,8 @@
       "file": "help/conditional-email-notifications.html",
       "path": "/help/conditional-email-notifications.html",
       "type": "article",
-      "priority": "0.8"
+      "priority": "0.8",
+      "lastmod": "2026-11-23"
     },
     {
       "file": "help/personalized-confirmation-email.html",
@@ -113,8 +114,8 @@
       "type": "article",
       "priority": "0.8",
       "title": "Get Google Forms email notifications with responses included | Answerfinch",
-      "description": "Put Google Forms answers in the notification email you receive. Choose your own address, insert the questions you need and preview the message.",
-      "lastmod": "2026-11-20"
+      "description": "Get Google Forms answers by email. Use Email me every response for your first rule or choose which answers to include.",
+      "lastmod": "2026-11-23"
     },
     {
       "file": "support.html",

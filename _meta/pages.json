@@ -21,7 +21,8 @@
       "file": "help/faq.html",
       "path": "/help/faq.html",
       "priority": "0.8",
-      "jsonld": "faq"
+      "jsonld": "faq",
+      "lastmod": "2026-11-23"
     },
     {
       "file": "help/email-notifications-not-working.html",

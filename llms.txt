@@ -24,6 +24,7 @@ Answerfinch is made by Lazy Labs. It is not related to other products named Finc
 - [Send email by answer with Apps Script](https://answerfinch.com/help/apps-script-email-by-form-answer.html): Try a form submit trigger and decide when to keep your own code.
 - [Notify multiple people about one response](https://answerfinch.com/help/email-notifications-multiple-people.html): Send to a Google Group or make a rule for each address.
 - [Include answers in your own notification](https://answerfinch.com/help/email-notifications-with-responses.html): Use Insert answer to put selected answers in the email you receive.
+- [Google フォームの回答内容をメールで受け取る方法](https://answerfinch.com/help/ja/email-notifications-with-responses.html): Japanese guide for sending form answers to your own email, with the English button labels.
 
 ## Policies
 

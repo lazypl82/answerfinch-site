@@ -119,6 +119,15 @@
       "lastmod": "2026-11-23"
     },
     {
+      "file": "help/ja/email-notifications-with-responses.html",
+      "path": "/help/ja/email-notifications-with-responses.html",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Google フォームの回答内容をメールで受け取る方法 | Answerfinch",
+      "description": "Google フォームの回答内容を自分宛てにメールで受け取る設定方法。Answerfinch で最初のルールを作り、テスト送信する手順を英語のボタン名とともに紹介します。",
+      "lastmod": "2026-11-23"
+    },
+    {
       "file": "support.html",
       "path": "/support.html",
       "type": "website",

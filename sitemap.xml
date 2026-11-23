@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://answerfinch.com/</loc><priority>1.0</priority></url>
   <url><loc>https://answerfinch.com/help/</loc><priority>0.8</priority></url>
-  <url><loc>https://answerfinch.com/help/faq.html</loc><priority>0.8</priority></url>
+  <url><loc>https://answerfinch.com/help/faq.html</loc><lastmod>2026-11-23</lastmod><priority>0.8</priority></url>
   <url><loc>https://answerfinch.com/help/email-notifications-not-working.html</loc><priority>0.8</priority></url>
   <url><loc>https://answerfinch.com/help/conditional-email-notifications.html</loc><lastmod>2026-11-23</lastmod><priority>0.8</priority></url>
   <url><loc>https://answerfinch.com/help/personalized-confirmation-email.html</loc><priority>0.8</priority></url>

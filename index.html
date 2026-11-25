@@ -43,35 +43,54 @@
 </header>
 
 <main>
-  <section class="hero" aria-labelledby="hero-title">
+  <section class="hero hero-flow" aria-labelledby="hero-title">
     <div class="wrap">
-      <div>
+      <div class="hero-copy">
         <p class="kicker">Add-on for Google Forms</p>
         <h1 id="hero-title">Email each Google&nbsp;Forms response to the right person</h1>
-        <p class="lede">Get the answers in the email, not just a “new response” alert. Send refund requests to billing, sign-ups to the organizer, or every response to yourself.</p>
+        <p class="lede">Each response goes to the inbox that should handle it, with the answers inside the email.</p>
         <div class="cta">
           <a class="btn btn-primary btn-lg" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Install free</a>
           <a class="btn btn-secondary btn-lg" href="#how">See how it works</a>
         </div>
         <p class="cta-note">Free: one rule at a time. Pro: $4/month or $29/year.</p>
-        <ul class="trust">
-          <li>Runs in your Google account. The add-on doesn’t send your form responses to our servers.</li>
-          <li>Preview your rule’s email with a real response before you save it.</li>
-        </ul>
       </div>
-      <figure class="visual" aria-label="A rule in the Answerfinch sidebar and the email it sends">
-        <div class="panel"><img src="assets/v10/sidebar-en.png" width="596" height="520" fetchpriority="high" alt="Answerfinch sidebar: the Refund requests rule is on and sends to billing."></div>
-        <div class="mail" role="img" aria-label="Example email sent by the rule">
-          <div class="mail-head"><span class="avatar" aria-hidden="true">Y</span><span><strong>You</strong> (your Google account)</span></div>
-          <p class="mail-subject">Refund request for ORD&#8209;1042</p>
-          <p class="mail-to">To: billing@example.test</p>
-          <p class="mail-body">Alex Morgan requests a refund for ORD&#8209;1042.</p>
-          <dl>
-            <dt>Request type</dt><dd>Refund</dd>
-            <dt>Message</dt><dd>Please refund my duplicate order.</dd>
-          </dl>
+
+      <figure class="flow" aria-label="Example: a refund response is emailed to billing, a quote request is emailed to sales">
+        <div class="flow-head" aria-hidden="true"><span>A response comes in</span><span>Your rule checks one answer</span><span>The right inbox gets the email</span></div>
+        <div class="route r1">
+          <div class="f-card form" aria-hidden="true">
+            <p class="f-title">Contact us</p>
+            <p class="f-q">Request type</p><p class="f-a">Refund</p>
+            <p class="f-q">Order number</p><p class="f-a">ORD-1042</p>
+          </div>
+          <div class="f-link" aria-hidden="true"><span class="dot"></span></div>
+          <div class="f-rule"><span class="if">If</span> Request type is <b>Refund</b></div>
+          <div class="f-link" aria-hidden="true"><span class="dot"></span></div>
+          <div class="f-card inbox">
+            <p class="f-to">billing@</p>
+            <p class="f-subj">Refund request for ORD&#8209;1042</p>
+            <p class="f-line">Request type: Refund</p>
+            <p class="f-line">Order number: ORD&#8209;1042</p>
+          </div>
         </div>
-        <figcaption class="visual-caption">Sample form and email. You write the message and choose which answers go in it.</figcaption>
+        <div class="route r2">
+          <div class="f-card form" aria-hidden="true">
+            <p class="f-title">Contact us</p>
+            <p class="f-q">Request type</p><p class="f-a">Quote</p>
+            <p class="f-q">Company</p><p class="f-a">Northwind</p>
+          </div>
+          <div class="f-link" aria-hidden="true"><span class="dot"></span></div>
+          <div class="f-rule"><span class="if">If</span> Request type is <b>Quote</b></div>
+          <div class="f-link" aria-hidden="true"><span class="dot"></span></div>
+          <div class="f-card inbox">
+            <p class="f-to">sales@</p>
+            <p class="f-subj">New quote request from Northwind</p>
+            <p class="f-line">Request type: Quote</p>
+            <p class="f-line">Company: Northwind</p>
+          </div>
+        </div>
+        <figcaption class="flow-cap">Example. You choose the question, the answer, the inbox and what the email says.</figcaption>
       </figure>
     </div>
   </section>

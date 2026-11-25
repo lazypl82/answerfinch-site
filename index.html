@@ -47,7 +47,7 @@
     <div class="wrap">
       <div>
         <p class="kicker">Add-on for Google Forms</p>
-        <h1 id="hero-title">Email each Google Forms response to the right person</h1>
+        <h1 id="hero-title">Email each Google&nbsp;Forms response to the right person</h1>
         <p class="lede">Get the answers in the email, not just a “new response” alert. Send refund requests to billing, sign-ups to the organizer, or every response to yourself.</p>
         <div class="cta">
           <a class="btn btn-primary btn-lg" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Install free</a>
@@ -62,17 +62,16 @@
       <figure class="visual" aria-label="A rule in the Answerfinch sidebar and the email it sends">
         <div class="panel"><img src="assets/v10/sidebar-en.png" width="596" height="520" fetchpriority="high" alt="Answerfinch sidebar: the Refund requests rule is on and sends to billing."></div>
         <div class="mail" role="img" aria-label="Example email sent by the rule">
-          <div class="mail-head"><img src="assets/answerfinch-mark.svg" alt="">Sent from your Google account</div>
-          <p class="mail-subject">Refund request for ORD-1042</p>
-          <p class="mail-to">To: billing@example.com</p>
+          <div class="mail-head"><span class="avatar" aria-hidden="true">Y</span><span><strong>You</strong> (your Google account)</span></div>
+          <p class="mail-subject">Refund request for ORD&#8209;1042</p>
+          <p class="mail-to">To: billing@example.test</p>
+          <p class="mail-body">Alex Morgan requests a refund for ORD&#8209;1042.</p>
           <dl>
-            <dt>Name</dt><dd>Alex Morgan</dd>
-            <dt>Order</dt><dd>ORD-1042</dd>
             <dt>Request type</dt><dd>Refund</dd>
             <dt>Message</dt><dd>Please refund my duplicate order.</dd>
           </dl>
         </div>
-        <figcaption class="visual-caption">Sample form and email</figcaption>
+        <figcaption class="visual-caption">Sample form and email. You write the message and choose which answers go in it.</figcaption>
       </figure>
     </div>
   </section>
@@ -103,7 +102,7 @@
           <tbody>
             <tr><th scope="row">Answers in the email</th><td class="them">No, a link to the form</td><td class="us">The answers you choose</td></tr>
             <tr><th scope="row">Who gets the email</th><td class="them">You and other form editors</td><td class="us">Anyone you choose</td></tr>
-            <tr><th scope="row">Different people for different answers</th><td class="them">No</td><td class="us">One rule per route</td></tr>
+            <tr><th scope="row">Different people for different answers</th><td class="them">No</td><td class="us">One rule for each answer</td></tr>
             <tr><th scope="row">Your own subject and message</th><td class="them">No</td><td class="us">Yes</td></tr>
             <tr><th scope="row">Confirmation to the person who answered</th><td class="them">A copy of their responses</td><td class="us">Your message, with their answers</td></tr>
             <tr><th scope="row">Send log and resend</th><td class="them">No</td><td class="us">Yes</td></tr>
@@ -113,10 +112,10 @@
     </div>
   </section>
 
-  <section class="tint" aria-labelledby="cases-title">
+  <section aria-labelledby="cases-title">
     <div class="wrap">
       <h2 id="cases-title">For shops, classrooms and events</h2>
-      <p class="sub">One rule per route. Each rule checks one question.</p>
+      <p class="sub">Pick a question, pick an answer, pick who hears about it.</p>
       <div class="cases">
         <div class="card"><p class="case-tag">Shops</p><h3>Send requests to the right team</h3><p class="grow">Refunds go to billing, wholesale questions to sales, everything else to support.</p><a class="more" href="help/conditional-email-notifications.html">Read the guide →</a></div>
         <div class="card"><p class="case-tag">Classrooms</p><h3>Confirm conference sign-ups</h3><p class="grow">Each parent gets a confirmation with the time slot they picked.</p><a class="more" href="help/conference-signup-confirmation.html">Read the guide →</a></div>
@@ -125,9 +124,9 @@
     </div>
   </section>
 
-  <section id="pricing" aria-labelledby="pricing-title">
+  <section id="pricing" class="tint" aria-labelledby="pricing-title">
     <div class="wrap narrow">
-      <div class="center"><h2 id="pricing-title">Pricing</h2><p class="sub">Plans apply to your whole Google account. Every condition type is included.</p></div>
+      <div class="center"><h2 id="pricing-title">Pricing</h2><p class="sub">Start free with one rule. Upgrade when you need more.</p></div>
       <div class="plans">
         <div class="card plan">
           <h3>Free</h3>
@@ -140,7 +139,7 @@
           </ul>
           <a class="btn btn-primary" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Install free</a>
         </div>
-        <div class="card plan pro">
+        <div class="card plan">
           <h3>Pro</h3>
           <p class="price">$29 <small>/ year</small></p>
           <p class="price-note">or $4 / month · taxes included</p>
@@ -149,18 +148,21 @@
             <li>Across every form in your Google account</li>
             <li>Everything in Free</li>
           </ul>
-          <a class="btn btn-secondary" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Start free, upgrade in the add-on</a>
+          <a class="btn btn-secondary" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Start free, upgrade later</a>
         </div>
       </div>
-      <p class="fine">Cancel any time. See the <a href="terms.html">Terms</a> for billing and refunds.</p>
+      <p class="fine">Plans cover your whole Google account. Pro is sold by Dodo Payments, our merchant of record. Cancel any time; see the <a href="terms.html">Terms</a>.</p>
     </div>
   </section>
 
-  <section class="tint" aria-labelledby="data-title">
-    <div class="wrap narrow">
+  <section aria-labelledby="data-title">
+    <div class="wrap">
       <h2 id="data-title">Your responses stay in your Google account</h2>
-      <p class="sub">Answerfinch runs in Google Apps Script under your account. Responses aren't sent to Lazy Labs servers. Emails go only to the recipients you choose, and test emails only to you.</p>
-      <p class="sub">Google limits how many emails a script can send each day; Answerfinch adds no cap of its own. Responses picked up more than 48 hours after they were submitted aren't sent automatically. <a href="privacy.html">Privacy Policy</a> · <a href="help/faq.html">FAQ</a></p>
+      <div class="cases">
+        <div class="card"><h3>Runs in your account</h3><p class="grow">Answerfinch runs in Google Apps Script under your Google account. Responses aren't sent to Lazy Labs servers.</p></div>
+        <div class="card"><h3>Only the people you choose</h3><p class="grow">Emails go to the recipients in your rules. Test emails go only to you.</p></div>
+        <div class="card"><h3>Google's limits apply</h3><p class="grow">Google caps how many emails a script can send each day. Answerfinch adds no cap of its own.</p><a class="more" href="privacy.html">Privacy Policy →</a></div>
+      </div>
     </div>
   </section>
 
@@ -174,9 +176,10 @@
 </main>
 
 <footer>
+  <h2 class="visually-hidden">Site links</h2>
   <div class="wrap">
     <div class="cols">
-      <div><a class="mark" href="index.html"><img src="assets/answerfinch-mark.svg" alt="">Answerfinch</a><p style="margin-top:8px">Email routing for Google Forms, by Lazy Labs.</p></div>
+      <div><a class="mark" href="index.html"><img src="assets/answerfinch-mark.svg" alt="">Answerfinch</a><p class="tagline">Email routing for Google Forms, by Lazy Labs.</p></div>
       <div><h3>Guides</h3><ul>
         <li><a href="help/email-notifications-with-responses.html">Responses in your email</a></li>
         <li><a href="help/conditional-email-notifications.html">Email based on answers</a></li>

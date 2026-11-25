@@ -1,14 +1,14 @@
 {
   "site": "https://answerfinch.com",
   "default_image": "/assets/og-answerfinch-1200x630.png",
-  "marketplace": "https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notificati/602427031339",
+  "marketplace": "https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339",
   "pages": [
     {
       "file": "index.html",
       "path": "/",
       "type": "website",
       "priority": "1.0",
-      "title": "Answerfinch: Conditional email notifications for Google Forms",
+      "title": "Answerfinch: Form Notifications & Email Routing for Google Forms",
       "description": "Answerfinch is a Google Forms™ add-on that sends emails based on form answers. On Free you run one rule at a time across your Google account. Pro is $4 a month or $29 a year.",
       "jsonld": "software"
     },

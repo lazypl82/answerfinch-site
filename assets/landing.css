@@ -235,3 +235,22 @@ h1 { font-size:clamp(34px,3.6vw,46px); line-height:1.18; }
 .hero-copy .lede { margin-bottom:24px; }
 .route { margin-bottom:14px; }
 .f-card { padding:14px 16px; }
+
+/* round 5: no looping dots. Solid connectors + one-time staged reveal */
+.dot { display:none !important; }
+.f-link { height:1.5px; background:#c4c7c5; }
+.f-link::after { border-left-color:#c4c7c5; }
+@media (prefers-reduced-motion:no-preference) {
+  .route > * { opacity:0; transform:translateY(6px); animation:reveal .5s cubic-bezier(.2,0,0,1) forwards; }
+  .route > :nth-child(1) { animation-delay:.10s; }
+  .route > :nth-child(2) { animation-delay:.35s; }
+  .route > :nth-child(3) { animation-delay:.45s; }
+  .route > :nth-child(4) { animation-delay:.70s; }
+  .route > :nth-child(5) { animation-delay:.80s; }
+  .r2 > * { animation-delay:calc(var(--d, 0s) + .25s); }
+  .r2 > :nth-child(1) { animation-delay:.35s; } .r2 > :nth-child(2) { animation-delay:.60s; } .r2 > :nth-child(3) { animation-delay:.70s; } .r2 > :nth-child(4) { animation-delay:.95s; } .r2 > :nth-child(5) { animation-delay:1.05s; }
+  .inbox { animation-name:reveal-inbox !important; }
+}
+@keyframes reveal { to { opacity:1; transform:none; } }
+@keyframes reveal-inbox { 0% { opacity:0; transform:translateY(6px); } 60% { opacity:1; transform:none; box-shadow:0 0 0 4px rgba(11,87,208,.12), var(--shadow); } 100% { opacity:1; transform:none; box-shadow:var(--shadow); } }
+@media (max-width:860px){ .f-link { width:1.5px; height:24px; background:#c4c7c5; } }

@@ -39,7 +39,7 @@
 <main>
   <h1>Get Google Forms email notifications with responses included</h1>
   <p class="dek">To get Google Forms™ answers by email, choose <b>Email me every response</b> if you see it when setting up your first rule. To pick the answers yourself, create a rule and use <b>Insert answer</b>. On Free you can run one rule at a time across your Google account.</p>
-  <p class="soft">By Lazy Labs. <time datetime="2026-11-23">November 23, 2026</time>. Steps checked against Answerfinch v9.</p>
+  <p class="soft">By Lazy Labs. <time datetime="2026-11-23">November 23, 2026</time>. Steps for Answerfinch v10.</p>
   <p class="soft">Read this guide in <a lang="es" hreflang="es" href="es/email-notifications-with-responses.html">Español</a> · <a lang="pt" hreflang="pt" href="pt/email-notifications-with-responses.html">Português</a> · <a lang="ja" hreflang="ja" href="ja/email-notifications-with-responses.html">日本語</a> · <a lang="ko" hreflang="ko" href="ko/email-notifications-with-responses.html">한국어</a></p>
 
   <figure>
@@ -48,7 +48,7 @@
       <source src="/assets/first-rule-demo.mp4" type="video/mp4">
       <a href="/assets/first-rule-demo.mp4">Download the first rule demo</a>
     </video>
-    <figcaption><span id="first-rule-demo-description">A sample form response, the Email me every response button, a test preview, and the sample email with the form answers.</span> <a href="#email-me-every-response">Read the steps</a>.</figcaption>
+    <figcaption><span id="first-rule-demo-description">The v9 demo shows a sample response, the Email me every response button, a test preview, and the sample email with the form answers.</span> <a href="#email-me-every-response">Read the steps</a>.</figcaption>
   </figure>
 
   <section class="section" id="email-me-every-response">
@@ -56,18 +56,18 @@
     <ol>
       <li>Open Answerfinch from the form's add-on menu. If prompted, choose <b>Start in this form</b>.</li>
       <li>In <b>Rules</b>, choose <b>Email me every response</b> if you see it. You save one rule that sends to the Google account you're using. It matches when someone answers the required question shown above the button.</li>
-      <li>Alerts are still off after you save. Choose <b>Preview and test</b> and check the email. If you have no response to preview, submit a sample to your test form and try again. Then choose <b>Turn on alerts and send test</b>. The test goes to your own address.</li>
+      <li>The rule is off after you save. Open <b>Rule actions</b> (⋮), choose <b>Preview and test</b> and check the email. If you have no response to preview, submit a sample to your test form and try again. Then choose <b>Turn on alerts and send test</b>. The test goes to your own address.</li>
     </ol>
     <p>You need a supported required question in the first section. For example, make a Short answer question required and choose <b>Refresh</b> in the sidebar. If you already use Answerfinch rules on this account, use the steps below.</p>
-    <p>In the email, you'll see answers to supported questions in form order. If you have a long form, some questions can be left out to fit the template. You can use <b>Edit</b> on the rule to change the message.</p>
+    <p>In the email, you'll see answers to supported questions in form order. If you have a long form, some questions can be left out to fit the template. To change the message, open <b>Rule actions</b> (⋮) and choose <b>Edit rule</b>.</p>
   </section>
 
   <section class="section">
     <h2>Create a rule and choose which answers to include</h2>
     <ol>
-      <li>Open Answerfinch from the form's add-on menu. If prompted, choose <b>Start in this form</b>. Choose <b>Create a rule</b> or <b>New rule</b>. If you see <b>Run this rule on Free instead</b>, choose it to open the editor.</li>
-      <li>Enter a <b>Rule name</b>. Under <b>When</b>, choose a required question in the first section that everyone answers. Choose <b>is not empty</b> to match every new response. For example, use a required Short answer question called “Name”.</li>
-      <li>Under <b>Send to</b>, choose <b>This address</b> and enter your own email address. Set a subject such as “New workshop registration”.</li>
+      <li>Open Answerfinch from the form's add-on menu. If prompted, choose <b>Start in this form</b>. Choose <b>Create a rule</b> or <b>New rule</b>. If you see <b>Create rule on Free</b>, choose it to open the editor. Saving keeps your current Free rule.</li>
+      <li>Enter a <b>Rule name</b>. Under <b>When to send</b>, choose a required question in the first section that everyone answers. Choose <b>is not empty</b> to match every new response. For example, use a required Short answer question called “Name”.</li>
+      <li>Under <b>Who gets the email</b>, choose <b>This address</b> and enter your own email address. Under <b>What to send</b>, set a subject such as “New workshop registration”.</li>
     </ol>
     <p>You don't need to collect email addresses to send to your own address. If you want to email the person who filled out the form, see <a href="personalized-confirmation-email.html">how to send a personalized confirmation</a>.</p>
   </section>
@@ -78,13 +78,13 @@
     <p>With a sample response, you might see this in your inbox:</p>
     <p>Name: Sam Lee<br>
     Session: Tuesday morning</p>
-    <p>Choose <b>Preview</b> to check the draft. If you see <b>Select a response</b>, choose a sample response. If you are setting up a test form, submit a sample to that form first. Choose <b>Save</b>, then <b>Save rule</b>.</p>
+    <p>Choose <b>Refresh</b> in <b>Preview</b> to check the draft. If you see <b>Select a response</b>, choose a sample response. If you are setting up a test form, submit a sample to that form first. Choose <b>Review rule</b>, then <b>Save rule</b>.</p>
   </section>
 
   <section class="section">
     <h2>Turn on alerts and send yourself a test</h2>
-    <p>If you see <b>Preview and test</b> on your first rule, open it and choose <b>Turn on alerts and send test</b> after checking the message.</p>
-    <p>Otherwise, turn on alerts with the switch. If the rule is paused on Free, choose <b>Keep this rule on Free</b> and confirm the switch. Choose <b>Send me a test</b>, check the answers and confirm with <b>Send test to myself</b>.</p>
+    <p>If you see <b>Preview and test</b> in the <b>Rule actions</b> menu (⋮), select it. Check the message and choose <b>Turn on alerts and send test</b>.</p>
+    <p>Otherwise, turn on the switch beside the rule. If you see <b>Waiting (Free)</b>, choose <b>Switch to this rule</b> and confirm. The previous Free rule stops running. In <b>Rule actions</b> (⋮), choose <b>Send me a test</b>. Check the answers and choose <b>Send test to myself</b>.</p>
   </section>
 
   <section class="section" id="permissions">
@@ -92,7 +92,7 @@
     <ul>
       <li><b>Your current form.</b> We read questions and responses in the form you're using so you can check rules and preview emails.</li>
       <li><b>Send email.</b> We send your alerts, tests and account notices through your Google account.</li>
-      <li><b>Run when you're not there.</b> When you turn on alerts, Google runs Answerfinch on new submissions, even when your form isn't open.</li>
+      <li><b>Run when you're not there.</b> When you turn on a rule, Google runs Answerfinch on new submissions, even when your form isn't open.</li>
       <li><b>Connect to an external service.</b> We contact Dodo Payments to activate and check your Pro license.</li>
       <li><b>Show content in Google Forms.</b> We open the sidebar, rule editor and confirmation dialogs inside your form.</li>
       <li><b>Your Google Account email address.</b> We identify your account and send tests and account notices to your address.</li>

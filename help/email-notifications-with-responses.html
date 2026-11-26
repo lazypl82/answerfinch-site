@@ -66,25 +66,26 @@
     <h2>Create a rule and choose which answers to include</h2>
     <ol>
       <li>Open Answerfinch from the form's add-on menu. If prompted, choose <b>Start in this form</b>. Choose <b>Route emails by answer</b> or <b>New rule</b>. If you see <b>Create rule on Free</b>, choose it to open the editor. Saving keeps your current Free rule.</li>
-      <li>Enter a <b>Rule name</b>. Under <b>When to send</b>, choose a required question in the first section that everyone answers. Choose <b>is not empty</b> to match every new response. For example, use a required Short answer question called “Name”.</li>
-      <li>Under <b>Who gets the email</b>, choose <b>This address</b> and enter your own email address. Under <b>What to send</b>, set a subject such as “New workshop registration”.</li>
+      <li>Enter a <b>Rule name</b>. Under <b>Condition</b>, choose a required question everyone answers. Select <b>Has an answer</b> to match every new response that answers the question. To match a specific answer instead, select <b>Is equal to</b> and choose or enter the value. If you need to change how values are entered, look for <b>Value type</b> in <b>Advanced settings</b>.</li>
+      <li>Under <b>Recipient</b>, choose <b>This address</b> and enter your email address. In <b>Subject</b>, enter a subject such as “New workshop registration”. To email the person who filled out the form, choose <b>Respondent</b> and use <b>Address source</b> to select an email question or <b>Google Forms email</b>.</li>
     </ol>
     <p>You don't need to collect email addresses to send to your own address. If you want to email the person who filled out the form, see <a href="personalized-confirmation-email.html">how to send a personalized confirmation</a>.</p>
   </section>
 
   <section class="section">
     <h2>Put answers in the message</h2>
-    <p>For a workshop form, type “Name: ” in <b>Message</b>. Leave the cursor after the label, choose <b>Insert answer</b> and pick the Name question. On a new line, type “Session: ” and insert the Session question. Pick the questions from the menu so each one appears as an answer tag.</p>
+    <p>For a workshop form, type “Name: ” in <b>Message</b>. Leave the cursor after the label, choose <b>Insert answer</b> and pick the Name question. On a new line, type “Session: ” and insert the Session question. Pick the questions from the menu so each one appears as an answer chip. Use the ⋮ <b>More options</b> button beside the message format for help with inserted answers and message limits.</p>
     <p>With a sample response, you might see this in your inbox:</p>
     <p>Name: Sam Lee<br>
     Session: Tuesday morning</p>
-    <p>Choose <b>Refresh</b> in <b>Preview</b> to check the draft. If you see <b>Select a response</b>, choose a sample response. If you are setting up a test form, submit a sample to that form first. Choose <b>Save</b>, then <b>Save rule</b>.</p>
+    <p>Check the draft in <b>Preview</b>. Leave the response picker on <b>Latest match</b> or choose a sample response. If your test form has no responses, submit a sample first. The preview updates as you edit. Use <b>Refresh</b> to load it again. Choose <b>Save</b>, then <b>Save rule</b>.</p>
   </section>
 
   <section class="section">
     <h2>Turn on alerts and send yourself a test</h2>
     <p>If you see <b>Preview and test</b> in the <b>Rule actions</b> menu (⋮), select it. Check the message and choose <b>Turn on alerts and send test</b>.</p>
     <p>Otherwise, turn on the switch beside the rule. If you see a prompt naming the rule you want to run, choose <b>Switch rule</b>. The previous Free rule stops running. In <b>Rule actions</b> (⋮), choose <b>Send me a test</b>. Check the answers and choose <b>Send test to myself</b>.</p>
+    <p>In <b>Send log</b>, <b>Sent</b> means Google accepted the email for sending. Check your inbox to confirm it arrived.</p>
   </section>
 
   <section class="section" id="permissions">

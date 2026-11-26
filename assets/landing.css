@@ -194,6 +194,8 @@ h1 { font-size:clamp(34px,3.6vw,46px); line-height:1.18; }
 .hx-copy h1 { font-size:clamp(40px,4.2vw,56px); line-height:1.08; letter-spacing:-.02em; margin:12px 0 24px; text-wrap:balance; }
 .hx-copy .lede { font-size:20px; line-height:30px; color:var(--soft); max-width:520px; margin-bottom:32px; }
 .hx-copy .cta { display:flex; gap:12px; flex-wrap:wrap; }
+.hx-demo { display:inline-flex; align-items:center; gap:8px; min-height:24px; color:var(--ink); font-size:14px; line-height:20px; text-decoration:underline; text-underline-offset:3px; }
+.hx-demo svg { width:16px; height:16px; flex:none; fill:currentColor; }
 .hx .btn, .hx-copy .btn-lg { border-radius:24px; }
 .hx-copy .cta-note { margin-top:16px; color:var(--ink); font-size:14px; line-height:20px; }
 .hx-trust { list-style:none; padding:0; margin:12px 0 0; display:flex; flex-wrap:wrap; gap:8px 24px; color:var(--mute); font-size:14px; line-height:20px; }

@@ -43,12 +43,12 @@
 </header>
 
 <main>
-  <section class="hero hero-flow" aria-labelledby="hero-title">
+  <section class="hero hero-m" aria-labelledby="hero-title">
     <div class="wrap">
-      <div class="hero-copy">
+      <div class="hm-copy">
         <p class="kicker">Add-on for Google Forms</p>
-        <h1 id="hero-title">Email each Google&nbsp;Forms response to the right person</h1>
-        <p class="lede">Each response goes to the inbox that should handle it, with the answers inside the email.</p>
+        <h1 id="hero-title">Email each Google&nbsp;Forms <br class="br-d">response to the right&nbsp;person</h1>
+        <p class="lede">Pick a question and an answer. When a response matches, that person gets an email with the answers inside.</p>
         <div class="cta">
           <a class="btn btn-primary btn-lg" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Install free</a>
           <a class="btn btn-secondary btn-lg" href="#how">See how it works</a>
@@ -56,41 +56,22 @@
         <p class="cta-note">Free: one rule at a time. Pro: $4/month or $29/year.</p>
       </div>
 
-      <figure class="flow" aria-label="Example: a refund response is emailed to billing, a quote request is emailed to sales">
-        <div class="flow-head" aria-hidden="true"><span>A response comes in</span><span>Your rule checks one answer</span><span>The right inbox gets the email</span></div>
-        <div class="route r1">
-          <div class="f-card form" aria-hidden="true">
-            <p class="f-title">Contact us</p>
-            <p class="f-q">Request type</p><p class="f-a">Refund</p>
-            <p class="f-q">Order number</p><p class="f-a">ORD-1042</p>
+      <figure class="hm-figure">
+        <div class="hm-mail" role="img" aria-label="Example email sent to billing@yourshop.com with the subject Refund request for ORD-1042. It lists the answers: request type Refund, order number ORD-1042, name Alex Morgan, and the customer's message.">
+          <div class="hm-match" aria-hidden="true"><span class="hm-if">Rule</span>Request type is <b>Refund</b></div>
+          <p class="hm-subj" aria-hidden="true">Refund request for ORD&#8209;1042</p>
+          <div class="hm-meta" aria-hidden="true">
+            <span class="hm-av">C</span>
+            <div><p class="hm-from">Contact us form</p><p class="hm-to">to <b>billing@yourshop.com</b></p></div>
           </div>
-          <div class="f-link" aria-hidden="true"></div>
-          <div class="f-rule"><span class="if">If</span> Request type is <b>Refund</b></div>
-          <div class="f-link" aria-hidden="true"></div>
-          <div class="f-card inbox">
-            <p class="f-to">billing@</p>
-            <p class="f-subj">Refund request for ORD&#8209;1042</p>
-            <p class="f-line">Request type: Refund</p>
-            <p class="f-line">Order number: ORD&#8209;1042</p>
-          </div>
+          <dl class="hm-answers" aria-hidden="true">
+            <div><dt>Request type</dt><dd>Refund</dd></div>
+            <div><dt>Order number</dt><dd>ORD&#8209;1042</dd></div>
+            <div><dt>Name</dt><dd>Alex Morgan</dd></div>
+            <div class="hm-msg"><dt>Message</dt><dd>I was charged twice. Please refund the duplicate order.</dd></div>
+          </dl>
         </div>
-        <div class="route r2">
-          <div class="f-card form" aria-hidden="true">
-            <p class="f-title">Contact us</p>
-            <p class="f-q">Request type</p><p class="f-a">Quote</p>
-            <p class="f-q">Company</p><p class="f-a">Northwind</p>
-          </div>
-          <div class="f-link" aria-hidden="true"></div>
-          <div class="f-rule"><span class="if">If</span> Request type is <b>Quote</b></div>
-          <div class="f-link" aria-hidden="true"></div>
-          <div class="f-card inbox">
-            <p class="f-to">sales@</p>
-            <p class="f-subj">New quote request from Northwind</p>
-            <p class="f-line">Request type: Quote</p>
-            <p class="f-line">Company: Northwind</p>
-          </div>
-        </div>
-        <figcaption class="flow-cap">Example. You choose the question, the answer, the inbox and what the email says.</figcaption>
+        <figcaption class="hm-cap">Example. Refund requests go to billing@, quote requests go to sales@. You choose the question, the answer and the inbox.</figcaption>
       </figure>
     </div>
   </section>

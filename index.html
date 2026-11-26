@@ -22,70 +22,187 @@
 <link rel="icon" type="image/svg+xml" href="/assets/answerfinch-mark.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#1C1C1E">
+<meta name="theme-color" content="#FFFFFF">
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c19460813e6543029489f478b595bb10"}'></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://answerfinch.com/#website", "name": "Answerfinch", "alternateName": ["Answerfinch for Google Forms", "answerfinch.com"], "url": "https://answerfinch.com/", "publisher": {"@id": "https://answerfinch.com/#lazylabs"}}, {"@type": "Organization", "@id": "https://answerfinch.com/#lazylabs", "name": "Lazy Labs", "url": "https://answerfinch.com/", "email": "support@answerfinch.com", "logo": {"@type": "ImageObject", "url": "https://answerfinch.com/icon-512.png", "width": 512, "height": 512}}, {"@type": "SoftwareApplication", "@id": "https://answerfinch.com/#app", "name": "Answerfinch", "applicationCategory": "BusinessApplication", "applicationSubCategory": "Google Forms add-on", "operatingSystem": "Web (Google Forms add-on)", "url": "https://answerfinch.com/", "installUrl": "https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339", "sameAs": ["https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339"], "description": "Answerfinch is a Google Forms™ add-on that sends emails based on form answers. On Free you run one rule at a time across your Google account. Pro is $4 a month or $29 a year.", "image": "https://answerfinch.com/assets/og-answerfinch-1200x630.png", "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Pro, monthly", "price": "4", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Pro, yearly", "price": "29", "priceCurrency": "USD"}], "publisher": {"@id": "https://answerfinch.com/#lazylabs"}}]}</script>
 <!-- meta:end -->
-<link rel="stylesheet" href="assets/site.css">
+
+<link rel="stylesheet" href="assets/landing.css">
 </head>
 <body>
 <header class="top">
-  <a class="mark" href="index.html"><img src="assets/answerfinch-mark.svg" alt="">Answerfinch</a>
-  <nav><a href="help/">Guides</a><a href="#pricing">Pricing</a><a href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Install</a></nav>
-</header>
-<main>
-  <p class="kicker">Google Forms add-on</p>
-  <h1>Email the right person when a form answer matches</h1>
-  <p class="dek">You pick a question and an answer, and choose who gets the email. When a matching response arrives, the email goes out automatically from your Google account.</p>
-  <div class="cta"><a href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Install Answerfinch</a><span>From Google Workspace Marketplace. On Free you run one rule at a time, with no Answerfinch daily or monthly send cap.</span></div>
-
-  <figure>
-    <img src="help/assets/screenshots/891daf2-rule-editor.png" width="760" height="620" fetchpriority="high" alt="The Answerfinch rule editor: when Request type is Refund, email billing, with a preview of the email">
-    <figcaption>A rule in the Answerfinch editor, with the email preview on the right.</figcaption>
-  </figure>
-
-  <h2>What it does</h2>
-  <p>You write rules like "if Request type is Sales, email the sales team." Each rule uses one question and one condition: is, contains, is not empty or is any of. You send to a fixed address, or to an email address from the response.</p>
-  <p>You can put answers into the subject and the message, and use basic HTML. You can preview the email with a recent response, and send yourself a test.</p>
-  <p>In the send log you see Sent, Failed (with a reason when one is available), Unknown or Processing for recorded attempts. Sent means Google accepted the email for sending. You can't tell from Sent whether it reached the inbox.</p>
-  <p>You can review and resend eligible failed or unknown entries, and resends are labeled. You also see Google's remaining recipient count and how many recipients Answerfinch requested today.</p>
-
-  <h2 id="pricing">Pricing</h2>
-  <div class="plans">
-    <div>
-      <h3>Free</h3>
-      <p class="price">$0</p>
-      <p>1 rule at a time across your Google account, with every condition type. No Answerfinch daily or monthly send cap; Google's sending limits apply.</p>
-    </div>
-    <div>
-      <h3>Pro</h3>
-      <p class="price">$4 a month or $29 a year</p>
-      <p>Taxes included. Run more rules across every form in your Google account, within Google's sending and execution limits and Answerfinch's storage limits.</p>
-    </div>
+  <div class="wrap">
+    <a class="mark" href="index.html"><img src="assets/answerfinch-mark.svg" alt="">Answerfinch</a>
+    <nav aria-label="Main">
+      <a class="hide-sm" href="#how">How it works</a>
+      <a class="hide-sm" href="help/">Guides</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn btn-primary" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Install</a>
+    </nav>
   </div>
-  <p class="soft">You see the price and the free limit inside the add-on before you pay. Dodo Payments handles Pro purchases as merchant of record. To cancel, send one email to support@answerfinch.com or use the Dodo Payments customer portal. Cancelling stops future renewals. The <a href="terms.html">Terms</a> explain the UK cooling-off right and other refund requests.</p>
+</header>
 
-  <h2>Guides</h2>
-  <ul>
-    <li><a href="help/choose-google-forms-email-add-on.html">How to choose an email add-on for Google Forms</a></li>
-    <li><a href="help/conditional-email-recipes.html">Three ways to email people based on form answers</a></li>
-    <li><a href="help/conditional-email-notifications.html">Send email notifications based on Google Forms answers</a></li>
-    <li><a href="help/personalized-confirmation-email.html">Send a personalized confirmation email</a></li>
-    <li><a href="help/conference-signup-confirmation.html">Confirm parent-teacher conference sign-ups</a></li>
-  </ul>
+<main>
+  <section class="hero hx" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hx-copy">
+        <p class="kicker">Add-on for Google Forms</p>
+        <h1 id="hero-title">Email each Google&nbsp;Forms response to the right&nbsp;person</h1>
+        <p class="lede">Send responses to yourself, your team or the person who answered. Every response, or only the ones with a certain answer.</p>
+        <div class="cta">
+          <a class="btn btn-primary btn-lg" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Install free</a>
+          <a class="btn btn-secondary btn-lg" href="#how">See how it works</a>
+        </div>
+        <p class="cta-note">Free: one rule at a time. Pro: $4/month or $29/year.</p>
+        <ul class="hx-trust">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Z"/></svg>Runs in your Google account</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 10h18"/></svg>No card to start</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg>Cancel Pro any time</li>
+        </ul>
+      </div>
 
-  <h2>Your data</h2>
-  <p>Form responses are processed in Google Apps Script under your Google account, and are not sent to Lazy Labs servers. Rule emails go to the recipients you choose, and test emails go only to you. Operational diagnostics in Google logs may be visible to Lazy Labs, as the <a href="privacy.html">Privacy Policy</a> explains.</p>
-  <p>Rules and the send log are stored with your form. Each form keeps its latest 200 log entries, and you can view or resend entries from the last 30 days, whichever limit comes first. Expired entries are deleted the next time Answerfinch runs. You can delete a form's Answerfinch rules and log from that form.</p>
-  <p>To check a Pro license, Answerfinch sends the license key and activation information to Dodo Payments. It never sends response content or recipient addresses.</p>
+      <figure class="hx-card" role="img" aria-label="Example: a Contact us response with request type Refund matches the rule Request type is Refund, so an email with the answers goes to billing@example.test. More rules with Pro: quote requests to sales@ and support questions to help@.">
+        <div class="hx-resp" aria-hidden="true">
+          <div class="hx-head"><span class="hx-form-ico"></span><b>Contact us</b><span class="hx-time">New response · just now</span></div>
+          <dl class="hx-rows">
+            <div class="hit"><dt>Request type</dt><dd><span class="hx-val">Refund</span></dd></div>
+            <div><dt>Order number</dt><dd>ORD&#8209;1042</dd></div>
+            <div><dt>Name</dt><dd>Alex Morgan</dd></div>
+          </dl>
+        </div>
+        <div class="hx-rule" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 4v13m0 0-5-5m5 5 5-5"/></svg>
+          <span class="hx-chip">If <b>Request&nbsp;type</b> is <b>Refund</b>, email&nbsp;<b>billing@</b></span>
+        </div>
+        <div class="hx-mail" aria-hidden="true">
+          <div class="hx-subj"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg><div><p>Refund request for ORD&#8209;1042</p><p class="hx-to">to billing@example.test</p></div></div>
+          <div class="hx-text">
+            <p>Alex Morgan sent a refund request.</p>
+            <p>Request type: <b>Refund</b><br>Order number: ORD&#8209;1042</p>
+          </div>
+        </div>
+        <div class="hx-more" aria-hidden="true"><span class="hx-more-l">More rules with <span class="hx-pro">Pro</span></span><span class="hx-pill">Quote → sales@</span><span class="hx-pill">Support → help@</span></div>
+      </figure>
+    </div>
+  </section>
 
-  <h2>Limits</h2>
-  <p>Google limits how many emails a script can send each day. You can send within those limits; sending isn't unlimited.</p>
-  <p>Responses picked up more than 48 hours after they were submitted aren't sent automatically. You may still be able to resend eligible entries by hand while they are in the log.</p>
+  <section id="how" class="tint" aria-labelledby="how-title">
+    <div class="wrap">
+      <h2 id="how-title">Set up a rule in a minute</h2>
+      <p class="sub">Open Answerfinch from the Add-ons menu in your form. No spreadsheet, no code.</p>
+      <ol class="steps">
+        <li class="card"><h3>Choose when to send</h3><p>Pick a question and an answer, like “Request type is Refund,” or send every response.</p></li>
+        <li class="card"><h3>Choose who gets it</h3><p>Send to a fixed address, to yourself, or to the person who filled in the form.</p></li>
+        <li class="card"><h3>Save, turn on, test</h3><p>Preview and save the rule. Turn it on, then send yourself a test from the rule menu.</p></li>
+      </ol>
+      <figure class="editor narrow">
+        <div class="shot"><img src="assets/v10/editor-en.png" width="1520" height="1240" loading="lazy" alt="The Answerfinch rule editor. Condition: Request type is equal to Refund. Recipient: this address, billing@example.test. The email subject and message are below, and a preview on the right shows the email this response would send."></div>
+        <figcaption class="shot-caption">The rule editor shows the email before you save it. Sample form.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="compare-title">
+    <div class="wrap narrow">
+      <h2 id="compare-title">Google Forms tells you a response arrived. Answerfinch tells you what it says.</h2>
+      <p class="sub">And sends it to the people who need it.</p>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead><tr><th scope="col"><span class="visually-hidden">Feature</span></th><th scope="col">Google Forms notifications</th><th scope="col" class="us">Answerfinch</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Answers in the email</th><td class="them"><span class="m-label">Google Forms: </span>A new-response alert</td><td class="us"><span class="m-label">Answerfinch: </span>The answers you choose</td></tr>
+            <tr><th scope="row">Who gets the email</th><td class="them"><span class="m-label">Google Forms: </span>Form editors who turn notifications on</td><td class="us"><span class="m-label">Answerfinch: </span>Anyone you choose</td></tr>
+            <tr><th scope="row">Different people for different answers</th><td class="them"><span class="m-label">Google Forms: </span>No</td><td class="us"><span class="m-label">Answerfinch: </span>One rule for each recipient</td></tr>
+            <tr><th scope="row">Your own subject and message</th><td class="them"><span class="m-label">Google Forms: </span>No</td><td class="us"><span class="m-label">Answerfinch: </span>Yes</td></tr>
+            <tr><th scope="row">Confirmation to the person who answered</th><td class="them"><span class="m-label">Google Forms: </span>A copy of their responses, if you collect email addresses</td><td class="us"><span class="m-label">Answerfinch: </span>Your message, with their answers</td></tr>
+            <tr><th scope="row">Send log and resend</th><td class="them"><span class="m-label">Google Forms: </span>No</td><td class="us"><span class="m-label">Answerfinch: </span>Yes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cases-title">
+    <div class="wrap">
+      <h2 id="cases-title">For shops, classrooms and events</h2>
+      <p class="sub">Pick a question, pick an answer, pick who hears about it.</p>
+      <div class="cases">
+        <div class="card"><p class="case-tag">Shops</p><h3>Send requests to the right team</h3><p class="grow">Refunds go to billing, wholesale questions to sales, support questions to the help desk.</p><a class="more" href="help/conditional-email-notifications.html">Read the guide →</a></div>
+        <div class="card"><p class="case-tag">Classrooms</p><h3>Confirm conference sign-ups</h3><p class="grow">Each parent gets a confirmation with the time slot they picked.</p><a class="more" href="help/conference-signup-confirmation.html">Read the guide →</a></div>
+        <div class="card"><p class="case-tag">Events</p><h3>Get every sign-up in your inbox</h3><p class="grow">See each registration with its answers when people submit.</p><a class="more" href="help/email-notifications-with-responses.html">Read the guide →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="tint" aria-labelledby="pricing-title">
+    <div class="wrap narrow">
+      <div class="center"><h2 id="pricing-title">Pricing</h2><p class="sub">Start free with one rule. Upgrade when you need more.</p></div>
+      <div class="plans">
+        <div class="card plan">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <p class="price-note">No card needed</p>
+          <ul>
+            <li>One rule running at a time</li>
+            <li>Answers in the email, any recipient</li>
+            <li>Preview, test email and send log</li>
+          </ul>
+          <a class="btn btn-primary" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Install free</a>
+        </div>
+        <div class="card plan">
+          <h3>Pro</h3>
+          <p class="price">$29 <small>/ year</small></p>
+          <p class="price-note">or $4 / month · taxes included</p>
+          <ul>
+            <li>Many rules running at once</li>
+            <li>Across every form in your Google account</li>
+            <li>Everything in Free</li>
+          </ul>
+          <a class="btn btn-secondary" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Start free, upgrade later</a>
+        </div>
+      </div>
+      <p class="fine">After installing, choose Pro in the add-on’s Plan tab. Dodo Payments handles checkout as merchant of record. Cancel from the Dodo customer portal or by emailing support@answerfinch.com, and check your confirmation for the effective date. <a href="terms.html">Terms</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="data-title">
+    <div class="wrap">
+      <h2 id="data-title">Answerfinch processes responses in your Google account</h2>
+      <div class="cases">
+        <div class="card"><h3>Runs in your account</h3><p class="grow">Answerfinch runs in Google Apps Script under your Google account. The add-on doesn’t send your form responses to Lazy Labs servers.</p></div>
+        <div class="card"><h3>Only the people you choose</h3><p class="grow">Emails go to the recipients in your rules. Test emails go only to you. For Pro, your license key and activation details go to Dodo Payments to check your license.</p></div>
+        <div class="card"><h3>Google's limits apply</h3><p class="grow">Google caps how many recipients a script can email each day. Answerfinch adds no daily or monthly cap of its own.</p><a class="more" href="privacy.html">Privacy Policy →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="wrap center">
+      <h2 id="closing-title">Get your next response to the right person</h2>
+      <p class="sub">Install from the Google Workspace Marketplace. Stuck on your first rule? Email support@answerfinch.com and we'll help.</p>
+      <div class="cta"><a class="btn btn-primary btn-lg" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Install free</a></div>
+    </div>
+  </section>
 </main>
+
 <footer>
-  Answerfinch is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:support@answerfinch.com">support@answerfinch.com</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a><br>
-  Google Forms is a trademark of Google LLC.
+  <h2 class="visually-hidden">Site links</h2>
+  <div class="wrap">
+    <div class="cols">
+      <div><a class="mark" href="index.html"><img src="assets/answerfinch-mark.svg" alt="">Answerfinch</a><p class="tagline">Email routing for Google Forms, by Lazy Labs.</p></div>
+      <div><h3>Guides</h3><ul>
+        <li><a href="help/email-notifications-with-responses.html">Responses in your email</a></li>
+        <li><a href="help/conditional-email-notifications.html">Email based on answers</a></li>
+        <li><a href="help/personalized-confirmation-email.html">Confirmation emails</a></li>
+        <li><a href="help/">All guides</a></li></ul></div>
+      <div><h3>Company</h3><ul>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="mailto:support@answerfinch.com">support@answerfinch.com</a></li></ul></div>
+    </div>
+    <p class="legal">Lazy Labs, Republic of Korea. Google Forms is a trademark of Google LLC. Answerfinch is an independent add-on.</p>
+  </div>
 </footer>
 </body>
 </html>

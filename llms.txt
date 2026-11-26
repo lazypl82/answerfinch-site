@@ -7,7 +7,7 @@ Answerfinch is made by Lazy Labs. It is not related to other products named Finc
 ## Product
 
 - [Home](https://answerfinch.com/): what Answerfinch does, pricing and limits
-- [Install from Google Workspace Marketplace](https://workspace.google.com/marketplace/app/answerfinch_conditional_email_notificati/602427031339?utm_source=answerfinch.com&utm_medium=help&utm_campaign=llms)
+- [Install from Google Workspace Marketplace](https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339?utm_source=answerfinch.com&utm_medium=help&utm_campaign=llms)
 
 ## Guides
 

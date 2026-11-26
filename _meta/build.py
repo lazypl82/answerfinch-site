@@ -9,6 +9,11 @@ SITE = cfg['site']; IMG = SITE + cfg['default_image']; MP = cfg['marketplace']
 
 def esc(s): return html.escape(s, quote=True)
 
+translations = {}
+for page in cfg['pages']:
+    if group := page.get('translation_group'):
+        translations.setdefault(group, {})[page['lang']] = page['path']
+
 LOGO = SITE + "/icon-512.png"
 ORG = {"@type": "Organization", "@id": SITE + "/#lazylabs", "name": "Lazy Labs", "url": SITE + "/",
        "email": "support@answerfinch.com", "logo": {"@type": "ImageObject", "url": LOGO, "width": 512, "height": 512}}
@@ -80,9 +85,14 @@ for p in cfg['pages']:
     s = re.sub(r'\s*<!-- meta:start -->.*?<!-- meta:end -->', '', s, flags=re.S)
     s = re.sub(r'\s*<link rel="icon" type="image/svg\+xml" href="[^"]*answerfinch-mark\.svg">', '', s)
     url = SITE + p['path']
+    alternates = ''.join(
+        f'<link rel="alternate" hreflang="{esc(lang)}" href="{esc(SITE + path)}">\n'
+        for lang, path in translations.get(p.get('translation_group'), {}).items()
+    )
     block = ('<!-- meta:start -->\n'
              f'<meta name="description" content="{esc(desc)}">\n'
              f'<link rel="canonical" href="{url}">\n'
+             f'{alternates}'
              f'<meta property="og:type" content="{p.get("type","website")}">\n'
              f'<meta property="og:site_name" content="{esc(p.get("site_name","Answerfinch by Lazy Labs"))}">\n'
              f'<meta property="og:title" content="{esc(title)}">\n'

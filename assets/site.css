@@ -24,6 +24,7 @@ h1, h2, h3, p, ul, ol, figure, table, blockquote { margin:0; }
 
 /* Article column */
 main { max-width:640px; margin:0 auto; padding:64px 24px 96px; }
+html:lang(ko) body { word-break:keep-all; overflow-wrap:anywhere; }
 .kicker { font:600 14px/24px var(--sans); color:var(--soft); margin-bottom:16px; }
 h1 { font-weight:500; font-size:48px; line-height:56px; letter-spacing:-.015em; margin-bottom:24px; }
 .dek { font-size:22px; line-height:32px; color:var(--soft); margin-bottom:16px; }

@@ -112,11 +112,57 @@
     {
       "file": "help/email-notifications-with-responses.html",
       "path": "/help/email-notifications-with-responses.html",
+      "lang": "en",
+      "translation_group": "email-notifications-with-responses",
       "type": "article",
       "priority": "0.8",
       "title": "Get Google Forms email notifications with responses included | Answerfinch",
       "description": "Get Google Forms answers by email. Use Email me every response for your first rule or choose which answers to include.",
       "lastmod": "2026-11-23"
+    },
+    {
+      "file": "help/es/email-notifications-with-responses.html",
+      "path": "/help/es/email-notifications-with-responses.html",
+      "lang": "es",
+      "translation_group": "email-notifications-with-responses",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Cómo recibir por correo las respuestas de Formularios de Google | Answerfinch",
+      "description": "Recibe las respuestas de Formularios de Google en tu propio correo. Crea tu primera regla en Answerfinch y envíate un correo de prueba.",
+      "lastmod": "2026-11-24"
+    },
+    {
+      "file": "help/pt/email-notifications-with-responses.html",
+      "path": "/help/pt/email-notifications-with-responses.html",
+      "lang": "pt",
+      "translation_group": "email-notifications-with-responses",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Como receber respostas dos Formulários Google por e-mail | Answerfinch",
+      "description": "Receba as respostas dos Formulários Google no seu e-mail. Crie a primeira regra no Answerfinch e envie um e-mail de teste para você.",
+      "lastmod": "2026-11-24"
+    },
+    {
+      "file": "help/ja/email-notifications-with-responses.html",
+      "path": "/help/ja/email-notifications-with-responses.html",
+      "lang": "ja",
+      "translation_group": "email-notifications-with-responses",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Google フォームの回答内容をメールで受け取る方法 | Answerfinch",
+      "description": "Google フォームの回答内容を自分宛てにメールで受け取る設定方法。Answerfinch で最初のルールを作り、自分にテストメールを送信する手順を紹介します。",
+      "lastmod": "2026-11-23"
+    },
+    {
+      "file": "help/ko/email-notifications-with-responses.html",
+      "path": "/help/ko/email-notifications-with-responses.html",
+      "lang": "ko",
+      "translation_group": "email-notifications-with-responses",
+      "type": "article",
+      "priority": "0.8",
+      "title": "Google Forms 응답 내용을 내 이메일로 받기 | Answerfinch",
+      "description": "Google Forms 응답 내용을 내 이메일로 받는 방법입니다. Answerfinch에서 첫 규칙을 만들고 내 주소로 테스트 메일을 보내 보세요.",
+      "lastmod": "2026-11-24"
     },
     {
       "file": "support.html",

@@ -274,3 +274,26 @@ h1 { font-size:clamp(34px,3.6vw,46px); line-height:1.18; }
 }
 .hx-more { flex-wrap:wrap; row-gap:8px; } .hx-more-l { flex:0 0 100%; }
 .editor.narrow { max-width:760px; }
+
+/* ===== Brand color pass (2026-11-26): ink #1C1C1E · cream #F7F5F0 · marigold #FFB300 ===== */
+:root { --ink-brand:#1C1C1E; --cream:#F7F5F0; --marigold:#FFB300; --marigold-ink:#8A5A00; --marigold-soft:#FFF1CC; --marigold-line:#B37A00;
+  --blue:#1C1C1E; --blue-dark:#000000; --blue-soft:#FFF1CC; }
+a { color:var(--ink-brand); }
+main p a:not(.btn), main li a:not(.btn), .fine a, .legal a { text-decoration:underline; text-decoration-color:var(--marigold); text-decoration-thickness:2px; text-underline-offset:3px; }
+main p a:not(.btn):hover, main li a:not(.btn):hover { text-decoration-color:var(--marigold-line); }
+:focus-visible { outline-color:var(--marigold-line); }
+.btn-primary { background:var(--ink-brand); color:#fff; }
+.btn-primary:hover { background:#000; }
+.btn-secondary { color:var(--ink-brand); border-color:#c4c7c5; }
+.btn-secondary:hover { background:var(--cream); }
+.hx-copy .kicker, .case-tag, .compare thead th.us { color:var(--marigold-ink); }
+.hx-copy .kicker::before { content:""; display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--marigold); margin-right:8px; vertical-align:1px; }
+.steps li::before { background:var(--marigold-soft); color:#3d2a00; }
+.hx { background:linear-gradient(180deg,#fff 0%,#fff 40%,#FBF9F4 100%); }
+.hx-val { background:#FFE7A3; color:#3d2a00; }
+.hx-chip { background:var(--marigold-soft); color:#3d2a00; }
+.hx-rule svg { stroke:var(--marigold-line); }
+.hx-pro { background:var(--ink-brand); color:#fff; }
+:root { --tint:#FAF8F3; }
+.compare td.us, .compare th.us { background:#FFFBF0 !important; }
+.compare thead th { background:#FAF8F3; }

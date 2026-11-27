@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install Answerfinch</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="preload" href="/assets/fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="/"><img src="/assets/answerfinch-mark.svg" alt="">Answerfinch</a>
+</header>
+<main>
+  <h1>Install Answerfinch</h1>
+  <p><a id="marketplace-link" href="https://workspace.google.com/marketplace/app/answerfinch_form_notifications_email_rou/602427031339">Continue to Google Workspace Marketplace</a></p>
+</main>
+<footer>
+  Answerfinch is made by Lazy Labs, Republic of Korea. Support: <a href="mailto:support@answerfinch.com">support@answerfinch.com</a> · <a href="/support.html">Support</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a><br>
+  Google Forms is a trademark of Google LLC.
+</footer>
+<script>
+  const marketplaceLink = document.getElementById('marketplace-link');
+  const marketplaceUrl = new URL(marketplaceLink.href);
+  for (const [name, value] of new URLSearchParams(window.location.search)) {
+    if (/^utm_[a-z0-9_]+$/.test(name)) marketplaceUrl.searchParams.append(name, value);
+  }
+  marketplaceLink.href = marketplaceUrl.href;
+
+  let observer;
+  function continueToMarketplace() {
+    window.clearTimeout(deadline);
+    observer?.disconnect();
+    window.location.replace(marketplaceLink.href);
+  }
+
+  // Wait for the page-load beacon when available. Keep installation usable when analytics is blocked.
+  const deadline = window.setTimeout(continueToMarketplace, 1500);
+  if ('PerformanceObserver' in window) {
+    try {
+      observer = new PerformanceObserver((list) => {
+        if (list.getEntries().some(({ name }) => /^https:\/\/cloudflareinsights\.com\/cdn-cgi\/rum\/?$/.test(name))) {
+          continueToMarketplace();
+        }
+      });
+      observer.observe({ type: 'resource', buffered: true });
+    } catch {
+      observer?.disconnect();
+    }
+  }
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c19460813e6543029489f478b595bb10"}'></script>
+</body>
+</html>

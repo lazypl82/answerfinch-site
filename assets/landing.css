@@ -1,7 +1,7 @@
 /* Answerfinch landing · v10 system (matches the add-on: Google blue, Inter, 4/8/12/16/24/32/48/64 spacing) */
-@font-face { font-family:"Inter"; font-style:normal; font-weight:400; font-display:swap; src:url("fonts/inter-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family:"Inter"; font-style:normal; font-weight:500; font-display:swap; src:url("fonts/inter-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family:"Inter"; font-style:normal; font-weight:600; font-display:swap; src:url("fonts/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-style:normal; font-weight:400; font-display:optional; src:url("fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-style:normal; font-weight:500; font-display:optional; src:url("fonts/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-style:normal; font-weight:600; font-display:optional; src:url("fonts/inter-latin-600-normal.woff2") format("woff2"); }
 
 :root {
   --ink:#1f1f1f; --soft:#444746; --mute:#5f6368; --line:#e3e3e3; --bg:#ffffff; --tint:#f8fafd;
@@ -319,3 +319,4 @@ section.tint { background:var(--canvas); }
 .top nav a[aria-current="page"]:not(.btn) { color:var(--ink-brand); background:var(--marigold-soft); border-radius:999px; }
 .compare thead th { background:#F1F3F4; }
 :focus-visible { outline:2px solid var(--marigold-line); outline-offset:2px; }
+.top nav a[aria-current="page"]:not(.btn) { box-shadow:inset 0 0 0 1px #B37A00; }

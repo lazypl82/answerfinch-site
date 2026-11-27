@@ -55,6 +55,7 @@
   <ul>
     <li>Form responses are processed inside Google Apps Script under your Google account. We do not run servers that receive your responses.</li>
     <li>Your rules, email templates and the send log are stored in your form's Apps Script properties in your Google account.</li>
+    <li><strong>Unsaved rule drafts.</strong> To help you recover unsaved changes to a rule, Answerfinch temporarily stores the changes you make in the editor in <a href="https://developers.google.com/apps-script/guides/properties#comparison_of_property_stores">Google Apps Script user properties</a> for your Google account. This can include an email address you type, but does not include submitted form responses. Drafts expire 24 hours after the last draft update. Answerfinch tries to delete the draft when you save or discard your changes and clears expired drafts when it next checks them.</li>
     <li>The send log keeps up to the latest 200 entries per form, shared by all rules of that form, and only entries from the last 30 days can be viewed or resent. Expired entries are deleted the next time Answerfinch runs. You can delete a form's shared Answerfinch rules and log from that form. Account-data deletion removes your own Answerfinch account data and triggers; shared settings and records in other forms must be deleted from those forms. These actions do not delete the form's original responses or cancel a subscription.</li>
   </ul>
 

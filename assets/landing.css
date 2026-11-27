@@ -305,3 +305,17 @@ main p a:not(.btn):hover, main li a:not(.btn):hover { text-decoration-color:var(
 .compare td.us, .compare th.us { background:#fffcf2 !important; }
 .compare thead th { background:#f8f9fa; }
 .btn-secondary:hover { background:#f8f9fa; }
+
+/* ===== P9 60-30-10 (2026-11-27, same tokens as the app's tokens.css; PATTERNS.md 8) =====
+   60 cool grey canvas between sections · 30 white hero, top bar, cards, tables, shots · 10 marigold accents.
+   Primary buttons stay ink (founder 11/26: ink buttons + marigold accents). */
+:root { --canvas:#F6F7F9; --tint:#F6F7F9; --line:#E3E5E8; --mute:#5F6368; --soft:#5F6368; }
+body { background:var(--canvas); }
+.top { background:#fff; }
+.hx { background:#fff; }
+section.tint { background:var(--canvas); }
+.btn-secondary { background:#fff; border-color:#DADCE0; }
+.btn-secondary:hover { background:#F1F3F4; }
+.top nav a[aria-current="page"]:not(.btn) { color:var(--ink-brand); background:var(--marigold-soft); border-radius:999px; }
+.compare thead th { background:#F1F3F4; }
+:focus-visible { outline:2px solid var(--marigold-line); outline-offset:2px; }

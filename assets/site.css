@@ -1,11 +1,11 @@
 /* Answerfinch site · A2 editorial system
    Rhythm: 8px unit. Body 20/32. Every vertical gap is a multiple of 8.
    Fonts are self-hosted (SIL Open Font License): Newsreader for reading, Inter for small UI text. */
-@font-face { font-family:"Newsreader"; font-style:normal; font-weight:400; font-display:swap; src:url("fonts/newsreader-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family:"Newsreader"; font-style:normal; font-weight:500; font-display:swap; src:url("fonts/newsreader-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family:"Inter"; font-style:normal; font-weight:400; font-display:swap; src:url("fonts/inter-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family:"Inter"; font-style:normal; font-weight:500; font-display:swap; src:url("fonts/inter-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family:"Inter"; font-style:normal; font-weight:600; font-display:swap; src:url("fonts/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family:"Newsreader"; font-style:normal; font-weight:400; font-display:optional; src:url("fonts/newsreader-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family:"Newsreader"; font-style:normal; font-weight:500; font-display:optional; src:url("fonts/newsreader-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-style:normal; font-weight:400; font-display:optional; src:url("fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-style:normal; font-weight:500; font-display:optional; src:url("fonts/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family:"Inter"; font-style:normal; font-weight:600; font-display:optional; src:url("fonts/inter-latin-600-normal.woff2") format("woff2"); }
 
 :root { --ink:#1b1b1d; --soft:#55585f; --rule:#e5e1d8; --paper:#fbfaf6; --marigold:#ffb300; --serif:"Newsreader", Georgia, "Times New Roman", serif; --sans:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif; }
 * { box-sizing:border-box; }
@@ -109,3 +109,20 @@ main p > img.sidebar-example { width:min(100%, 270px); }
 main p:has(> em:only-child) { font:400 14px/24px var(--sans); color:var(--soft); margin-top:16px; margin-bottom:32px; }
 main p:has(> em:only-child) em { font-style:normal; }
 .muted { color:var(--soft); }
+
+/* ===== P9 60-30-10 (2026-11-27, same tokens as the app's tokens.css; PATTERNS.md 8) =====
+   60 cool grey canvas · 30 white reading sheet + ink · 10 marigold for "here / on / do". No beige. */
+:root { --canvas:#F6F7F9; --sheet:#FFFFFF; --ink:#1F1F1F; --soft:#5F6368; --rule:#E3E5E8; --paper:#F6F7F9; --marigold:#FFB300; --marigold-soft:#FFF4D6; --marigold-line:#B37A00; }
+body { background:var(--canvas); }
+main { background:var(--sheet); border-radius:16px; box-shadow:0 0 0 1px var(--rule), 0 1px 2px rgba(31,31,31,.04); max-width:720px; padding:64px 40px 80px; margin-bottom:32px; }
+code { background:#EEF1F4; }
+.top nav { align-items:center; }
+.top nav a { padding:4px 12px; margin:0 -12px; border-radius:999px; }
+.top nav a[aria-current="page"] { color:var(--ink); background:var(--marigold-soft); }
+a:focus-visible { outline:2px solid var(--marigold-line); outline-offset:2px; box-shadow:0 0 0 4px #FFF1C2; }
+footer { border-top:0; }
+@media (max-width:720px) {
+  main { border-radius:0; box-shadow:none; margin-bottom:0; }
+}
+.top nav a[aria-current="page"] { box-shadow:inset 0 0 0 1px var(--marigold-line); }
+/* Web fonts use font-display:optional (+ preload): no late swap, so first loads do not move (CLS). */
